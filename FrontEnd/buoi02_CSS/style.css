@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.logo img{
+    width:120px;
+}
+.menu ul li{
+    display:inline-block;
+    padding:10px;
+}
+.menu ul{background:black;}
+.menu ul li a{
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.cover{
+    background-image: url(../img/img03.jpg);
+    height:700px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.intro-left, .intro-right,.nha-tam,.sofa{
+    float:left;
+    width:49%;
+}
+.intro img{width:100%;}
+.intro-left ,.nha-tam{
+    margin-right:2%;
+}
+.phong-khach,.nhatam-sofa{
+    margin-bottom:20px;
+}
+.clear{
+    clear:both;
+}
+.product .title{text-align:center;}
+.product-item{
+    float:left;
+    width:24%;
+    padding:0 1%;
+}
+.product-item img{width:100%}
+.product h5{font-size:20px;}
+.product button{
+    color:white;
+    background:red;
+    padding:5px 10px;
+    border:none;
+    border-radius:5px;
+}
+.product p, button{
+    margin-top:10px;
+    text-align: justify;
+}
+.banner{
+    background-image: url("../img/img07.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    height:500px;
+    color:white;
+    position:relative;
+}
+.circle{
+    position:absolute;
+    top:200px;
+    left:100px;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:rgba(195,27,27,0.5);
+    text-align:center;
+}
+.circle p:first-child{
+    font-size:30px;
+    padding:50px 0 30px 0;
+}

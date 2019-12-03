@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 18</title>
+    <style type="text/css">
+        body{font-family:Arial}
+        *{box-sizing:border-box;}
+        .navbar{
+          /*  position:fixed;
+            top:0;
+            left:0;
+
+           */
+            background:#f1f1f1;
+            width:100%;
+            overflow:hidden;
+        }
+        a{
+            text-decoration:none;
+            font-size:17px;
+            float:left;
+            color:black;
+            padding:16px 14px;
+        }
+        a:hover{background:#ccc;}
+        a.active{
+            color:white;
+            background:#2196F3;
+        }
+        .barInput{
+          /*  position:absolute;
+            right:20px;
+            top:7px;
+
+           */
+            float:right;
+            margin-top:8px;
+            margin-right:20px;
+        }
+        input{
+            border:none;
+            font-size:17px;
+            float:left;
+            padding:8px;
+        }
+        .submit{
+            float:left;
+            border:none;
+            font-size:17px;
+            color:black;
+            background:#ddd;
+            padding:8px;
+        }
+        .submit:hover{background:#ccc}
+        @media screen and (max-width:800px){
+            .navbar, a, input,.submit,.barInput{
+                float:none;
+                display:block;
+                width:100%;
+                text-align:left;
+                margin:0;
+            }
+            input,.submit{
+                padding:16px;
+            }
+            input{border:1px solid #ccc;}
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="#Home" class="active">Home</a>
+    <a href="#About">About</a>
+    <a href="#Contact">Contact</a>
+    <div class="barInput">
+        <form action="">
+            <input type="text" name="search" placeholder="Search..">
+            <button class="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<h2>Responsive Input Field in Navbar</h2>
+<p>Navigation bar with a search box and a submit button inside of it.</p>
+<p>Resize the browser window to see the responsive effect.</p>
+</body>
+</html>

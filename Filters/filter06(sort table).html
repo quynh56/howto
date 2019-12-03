@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filters 06</title>
+    <style type="text/css">
+        table{
+            border:1px solid #ddd;
+            width:100%;
+            border-spacing: 0;
+            margin-top:20px;
+        }
+        th,td{
+            text-align:left;
+            padding:16px;
+        }
+        tr:nth-child(even){
+            background-color:#f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<p>Click the button to sort the table alphabetically, by name:</p>
+<button onclick="sortTable()">Sort</button>
+<table id="myTable">
+    <tr>
+        <th style="width:60%">Name</th>
+        <th style="width:40%">Country</th>
+    </tr>
+    <tr>
+        <td>Berglunds snabbkop</td>
+        <td>Sweden</td>
+    </tr>
+    <tr>
+        <td>North/South</td>
+        <td>UK</td>
+    </tr>
+    <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Koniglich Essen</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Magazzini Alimentari Riuniti</td>
+        <td>Italy</td>
+    </tr>
+    <tr>
+        <td>Paris specialites</td>
+        <td>France</td>
+    </tr>
+    <tr>
+        <td>Island Trading</td>
+        <td>UK</td>
+    </tr>
+    <tr>
+        <td>Laughing Bacchus Winecellars</td>
+        <td>Canada</td>
+    </tr>
+</table>
+<script>
+    function sortTable(){
+        var table, x,y,i,switching,shouldSwitch,rows;
+        table =document.getElementById("myTable");
+        switching =true;
+        //tạo 1 vòng lặp cho đến khi không có chuyển đổi đã được thực hiện
+        while(switching){
+            //bắt đầu bằng cách nói: không có switching đc thực hiện
+            switching =false;
+            rows = table.rows; //<tr>
+            //lặp qua tất cả các hàng của bảng( ngoại trừ hàng đầu tiên, chứa các mịc tiêu đề bảng)
+            for(i= 1; i < (rows.length -1); i++){
+                //bắt đầu bằng cách nói không nên chuyển đổi
+                shouldSwitch =false;
+                //lấy 2 yếu tố ta muốn so sánh ,1 hàng hiện tại và 1 từ hàng tiếp theo
+                x = rows[i].getElementsByTagName("TD")[0];
+                y =rows[i +1].getElementsByTagName("TD")[0];
+                //kiểm tra xem 2 hàng có nên chuyển vị trí không
+                if(x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()){
+                    //nếu vậy, đánh dấu là 1 chuyển đổi và break vòng lặp
+                    shouldSwitch =true;
+                    break;
+                }
+            }
+            if(shouldSwitch){
+                //nếu 1 công tắc đã được đánh dấu, hãy thực hiện chuyển đổi và đánh dấu rằng một 1 chuyển đã được thực hiện
+                rows[i].parentNode.insertBefore(rows[i+1],rows[i])
+                switching =true;
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

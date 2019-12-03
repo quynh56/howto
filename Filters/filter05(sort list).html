@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filters 05</title>
+</head>
+<body>
+<p>CLick the button to sort the list alphabetically:</p>
+<button onclick="sortList()">Sort</button>
+<ul id="myUL">
+    <li>Oslo</li>
+    <li>Stockholm</li>
+    <li>Helsinki</li>
+    <li>Berlin</li>
+    <li>Rome</li>
+    <li>Madrid</li>
+</ul>
+<script>
+    function sortList(){
+        var list,i,switching,b,shouldSwitch;
+        list =document.getElementById("myUL");
+        switching = true;
+        //tạo một vòng lặp sẽ tiếp tục cho đến khi không có switching đã được thực hiện
+        while(switching){
+            //bắt đầu bằng cách nói: không có switching được thực hiện
+            switching =false;
+            b =list.getElementsByTagName("LI");
+            //lặp qua tất cả các mục danh sách (list-items)
+            for(i = 0; i < (b.length -1);i++){
+                //bắt đầu bằng cách nói không nên có shouldSwitching
+                shouldSwitch = false;
+                //kiểm tra xem mục trực tiếp theo có shouldSwitching vị trí với mục hiện tại
+                if(b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()){
+                    //nếu mục tiếp theo là theo thứ tự abc thấp hơn mục hiện tại, đánh dấu là một công tắc và break vòng lặp
+                    shouldSwitch =true;
+                    break;
+                }
+            }
+            if(shouldSwitch){
+                //nếu một switch đã được đánh dấu, hãy thực hiện chuyển đổi và đánh dấu công tắc là xong
+                b[i].parentNode.insertBefore(b[i + 1],b[i]);
+                switching =true;
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 17</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .btn{
+            font-size:17px;
+            border:none;
+            padding:10px;
+            background:#cccccc;
+        }
+        .btn:hover{
+            background:#888888;
+        }
+        #id01{
+            background:rgb(0,0,0);
+            background:rgba(0,0,0,0.9);
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            display:none;
+        }
+        .close{
+            font-size:40px;
+            font-weight:bold;
+            position:absolute;
+            right:25px;
+            top:25px;
+            color:white;
+            cursor:pointer;
+        }
+        .search{
+            position:absolute;
+            top:50%;
+            left:10%;
+            width:80%;
+        }
+       .search input{
+            float:left;
+            padding:16px;
+            font-size:17px;
+            width:70%;
+            border:none;
+        }
+        .search button{
+            float:left;
+            text-align:Center;
+            border:none;
+            width:20%;
+            padding:16px;
+            font-size:17px;
+        }
+        input:hover{
+           background:#f1f1f1;
+        }
+        .search button:hover{
+           background:#ccc;
+        }
+        .close:hover{color:#ccc;}
+    </style>
+</head>
+<body>
+<h1>Fullscreen Search</h1>
+<p>Click on the button to open the search box.</p>
+<button onclick="openFunction();" class="btn">Open Search Box</button>
+<div id="id01">
+    <span onclick="closeFunction();" class="close">&times;</span>
+    <div class="search">
+        <input type="text" name="search" placeholder="Search..">
+        <button class="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+    </div>
+</div>
+<script>
+    function openFunction(){
+        document.getElementById("id01").style.display="block";
+    }
+    function closeFunction(){
+        document.getElementById("id01").style.display ="none";
+    }
+</script>
+</body>
+</html>

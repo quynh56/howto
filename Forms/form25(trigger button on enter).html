@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 25</title>
+</head>
+<body>
+<h3>Trigger Button Click on Enter</h3>
+<p>Press the "Enter" key inside the input field to trigger the button</p>
+<input type="text" value="Some text.." id="myInput">
+<button id="btn" onclick="alert('Hello World')">Button</button>
+<script>
+    var input =document.getElementById("myInput");
+    input.addEventListener("keyup",function(event){
+        if(event.keyCode === 13){
+            event.preventDefault();
+            document.getElementById("btn").click();
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filters 04</title>
+    <style type="text/css">
+        .dropdown{
+            position:relative;
+        }
+        .dropbtn{
+            padding:16px;
+            color:white;
+            font-size:16px;
+            background:#4CAF50;
+            border:none;
+            transition:height 0.5s;
+        }
+        .drop-content{
+            position:absolute;
+            width:300px;
+            border:1px solid #ddd;
+            overflow:auto;
+            height:auto;
+            display:none;
+            transition:height 0.5s;
+        }
+        .show{display:block}
+        .drop-content input{
+            border:none;
+            width:100%;
+            box-sizing:border-box;
+            padding:12px 20px 12px 50px;
+            border-bottom:1px solid #ddd;
+            background-image: url("img/icon-search.png");
+            background-repeat:no-repeat;
+            background-size:40px;
+        }
+        .drop-content input:focus{
+            border:3px solid #ddd;
+            outline:none;
+        }
+        .drop-content a{
+            display:block;
+            text-decoration:none;
+            color:black;
+            padding:16px;
+            background: #f1f1f1;
+        }
+        .drop-content a:hover{
+            background:#ccc;
+        }
+    </style>
+</head>
+<body>
+<h2>Search/Filter Dropdown</h2>
+<p>Click on the button to open the dropdown menu, and use the input field to search for a specific dropdown link.</p>
+<div class="dropdown">
+    <button class="dropbtn" id="mybtn" onclick="myFunction()">Dropdown</button>
+    <div class="drop-content">
+        <input type="text" id="myInput" onkeyup="filterFunction()" placeholder="Search..">
+        <a href="#about">About</a>
+        <a href="#base">Base</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="#custom">Custom</a>
+        <a href="#support">Support</a>
+        <a href="#tools">Tools</a>
+    </div>
+</div>
+<script>
+    function myFunction(){
+      document.getElementsByClassName("drop-content")[0].classList.toggle("show");
+    }
+    function filterFunction(){
+        var input, a, i,textValue, filter;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        a = document.getElementsByTagName("a");
+        for(i = 0; i < a.length; i++){
+            textValue = a[i].textContent || a[i].innerText;
+            if(textValue.toUpperCase().indexOf(filter) > -1){
+                a[i].style.display ="";
+            }else{
+                a[i].style.display ="none";
+            }
+        }
+    }
+</script>
+</body>
+</html>

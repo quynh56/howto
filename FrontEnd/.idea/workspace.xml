@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a728ca4b-d87a-478a-b291-0f863eed2863" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="658">
+              <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="556">
+              <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-243">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+        <option value="AMD JavaScript File" />
+        <option value="tsconfig.json" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>class=&quot;section__title&quot;</find>
+      <find>video</find>
+      <find>vid</find>
+      <find>.my</find>
+      <find>.carousel-item</find>
+      <find>movie__overlay</find>
+      <find>.wrap-inp</find>
+      <find>class=&quot;type</find>
+      <find>onclick</find>
+      <find>class=&quot;label-f</find>
+      <find>center</find>
+      <find>btn-info</find>
+      <find>date</find>
+      <find>tb-ho</find>
+      <find>class=&quot;table</find>
+      <find>class=&quot;table-</find>
+      <find>class=&quot;pa</find>
+      <find>class=&quot;hint</find>
+      <find>class=&quot;custom</find>
+      <find>class=&quot;modal</find>
+      <find>textarea</find>
+      <find>class=&quot;hien</find>
+      <find>9.4</find>
+      <find>td-diem</find>
+      <find>tableSinhVien</find>
+      <find>sinhviengioi</find>
+      <find>timsinhvien</find>
+      <find>svG</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/buoi11-tinh tien taxi/vendor/perfect-scrollbar/perfect-scrollbar.css" />
+        <option value="$PROJECT_DIR$/buoi11-tinh tien taxi/vendor/perfect-scrollbar/perfect-scrollbar.min.js" />
+        <option value="$PROJECT_DIR$/buoi11-tinh tien taxi/vendor/jquery/jquery-3.2.1.min.js" />
+        <option value="$PROJECT_DIR$/buoi11-tinh tien taxi/js/map-custom.js" />
+        <option value="$PROJECT_DIR$/buoi11-tinh tien taxi/css/main.css" />
+        <option value="$PROJECT_DIR$/buoi11-tinh tien taxi/js/main.js" />
+        <option value="$PROJECT_DIR$/buoi11-js/index.html" />
+        <option value="$PROJECT_DIR$/buoi11-js/main.js" />
+        <option value="$PROJECT_DIR$/buoi12-Mang du lieu/index.html" />
+        <option value="$PROJECT_DIR$/buoi12-Mang du lieu/main.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li nhan vien/js/jquery.easing.min.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li nhan vien/js/jquery.min.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li nhan vien/js/popper.min.js" />
+        <option value="$PROJECT_DIR$/buoi11-tinh tien taxi/index.html" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li nhan vien/WOW-master/demo.html" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li nhan vien/WOW-master/dist/wow.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li nhan vien/WOW-master/dist/wow.min.js" />
+        <option value="$PROJECT_DIR$/buoi12-SimpleObject/main.js" />
+        <option value="$PROJECT_DIR$/buoi12-SimpleObject/index.html" />
+        <option value="$PROJECT_DIR$/buoi12-SimpleObject/style.css" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/css/animate.css" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/css/clndr.css" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/css/custom.css" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/css/jqvmap.css" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/css/style.css" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/Chart.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/classie.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/clndr.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/custom.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery-1.11.1.min.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery.circlechart.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery.nicescroll.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery.vmap.world.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery.vmap.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery.vmap.sampledata.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/metisMenu.min.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/modernizr.custom.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/moment-2.2.1.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/script.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/scripts.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/site.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/skycons.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/underscore-min.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/validator.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/validator.min.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/index.html" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/css/main.css" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li sinh vien/js/main.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li nhan vien/js/main.js" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li nhan vien/css/style.css" />
+        <option value="$PROJECT_DIR$/buoi12-Quan li nhan vien/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="891" />
+    <option name="y" value="35" />
+    <option name="width" value="598" />
+    <option name="height" value="820" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FrontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FrontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="buoi12-Quan li nhan vien" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FrontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="buoi12-Quan li nhan vien" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\How To\FrontEnd\buoi12-Quan li sinh vien\js" />
+      <recent name="E:\xampp\htdocs\How To\FrontEnd\buoi12-Quan li sinh vien\css" />
+      <recent name="E:\xampp\htdocs\How To\FrontEnd\buoi12-Quan li nhan vien\css" />
+      <recent name="E:\xampp\htdocs\How To\FrontEnd\buoi12-Quan li nhan vien\css\animate" />
+      <recent name="E:\xampp\htdocs\How To\FrontEnd\buoi9-10-SASS\scss\Page\home" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\How To\FrontEnd\buoi7-8 Material design" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a728ca4b-d87a-478a-b291-0f863eed2863" name="Default Changelist" comment="" />
+      <created>1568885261832</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568885261832</updated>
+      <workItem from="1568885263769" duration="4191000" />
+      <workItem from="1568966303975" duration="12030000" />
+      <workItem from="1569225928341" duration="1647000" />
+      <workItem from="1569235910360" duration="559000" />
+      <workItem from="1569308670196" duration="8468000" />
+      <workItem from="1569318368245" duration="4969000" />
+      <workItem from="1569396860615" duration="13422000" />
+      <workItem from="1570212506062" duration="14429000" />
+      <workItem from="1570394717486" duration="10472000" />
+      <workItem from="1570474790032" duration="13730000" />
+      <workItem from="1570557095162" duration="3070000" />
+      <workItem from="1570649540599" duration="11727000" />
+      <workItem from="1572612948711" duration="724000" />
+      <workItem from="1572620372779" duration="174000" />
+      <workItem from="1572699703778" duration="7999000" />
+      <workItem from="1572760743268" duration="673000" />
+      <workItem from="1572940813038" duration="6276000" />
+      <workItem from="1572958167239" duration="38000" />
+      <workItem from="1573202074729" duration="969000" />
+      <workItem from="1573547118885" duration="1799000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="117366000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.111409396" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32848838" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="12" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/buoi7-8/index.html</url>
+          <line>196</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/buoi7-8/index.html</url>
+          <line>324</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/buoi11-tinh tien taxi/vendor/animate/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/css/animate.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi11-tinh tien taxi/vendor/jquery/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/js/jquery.easing.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2532" selection-start-column="2532" selection-end-column="2532" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22488" selection-start-line="2" selection-start-column="22488" selection-end-line="2" selection-end-column="22488" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/js/popper.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi9-10-SASS/css/bootstrap.min.js.map">
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi11-tinh tien taxi/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="69" column="10" lean-forward="true" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Mang du lieu/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/WOW-master/tsconfig.json" />
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/WOW-master/dist/wow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="512" column="14" selection-start-line="512" selection-start-column="14" selection-end-line="512" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/WOW-master/dist/wow.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/WOW-master/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-SimpleObject/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="98" column="26" lean-forward="true" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-SimpleObject/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-SimpleObject/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="39" column="6" lean-forward="true" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/css/fontawesome.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/css/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/css/clndr.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="438" column="1" selection-start-line="438" selection-start-column="1" selection-end-line="438" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/css/jqvmap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="3986" column="28" selection-start-line="3986" selection-start-column="28" selection-end-line="3986" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/images/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/Chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="3474" column="14" selection-start-line="3474" selection-start-column="14" selection-end-line="3474" selection-end-column="14" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/classie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/clndr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="1597" column="4" selection-start-line="1597" selection-start-column="4" selection-end-line="1597" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery-1.11.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="31553" selection-start-line="3" selection-start-column="31553" selection-end-line="3" selection-end-column="31553" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery.circlechart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="92" column="11" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery.nicescroll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="112" column="203" selection-start-line="112" selection-start-column="203" selection-end-line="112" selection-end-column="203" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery.vmap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery.vmap.world.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/jquery.vmap.sampledata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2386" selection-start-column="2386" selection-end-column="2386" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/metisMenu.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/modernizr.custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7558" selection-start-column="7558" selection-end-column="7558" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/moment-2.2.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18983" selection-start-line="2" selection-start-column="18983" selection-end-line="2" selection-end-column="18983" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/site.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="113" column="3" selection-start-line="113" selection-start-column="3" selection-end-line="113" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/skycons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="634" column="9" selection-start-line="634" selection-start-column="9" selection-end-line="634" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/underscore-min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/validator.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="5884" selection-start-line="7" selection-start-column="5884" selection-end-line="7" selection-end-column="5884" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi9-10-SASS/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi9-10-SASS/css/mystyle.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="171" column="21" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="546" selection-start-line="546" selection-end-line="546" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#2;n#ul#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#3;n#ul#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#4;n#ul#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li sinh vien/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buoi12-Quan li nhan vien/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

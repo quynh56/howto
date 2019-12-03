@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 05</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        body{
+            font-family:Arial;
+        }
+        *{box-sizing:border-box}
+        .container{
+            background:#f2f2f2;
+            padding:20px 0;
+            width:100%;
+            position:relative;
+            border-radius:5px
+        }
+        .btn ,input{
+            display:inline-block;
+            margin:5px 0;
+            width:100%;
+            text-decoration:none;
+            text-align:left;
+            color:white;
+            padding:12px;
+            border-radius:5px;
+            opacity:0.85;
+            border:none;
+            font-size:17px;
+        }
+        input[type="submit"]{
+            background:#4CAF50;
+            text-align:Center;
+
+        }
+        .btn:hover,input:hover{opacity:1}
+        .row:after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        .vl{
+            display:block;
+            position:absolute;
+            left:50%;
+            width:5px;
+            height:175px;
+            background:#ccc;
+            border-radius:5px;
+        }
+        .vl-inertext{
+            position:absolute;
+            top:40%;
+            left:-15px;
+            background: #f1f1f1;
+            border-radius: 50%;
+            padding:8px 10px;
+            border:1px solid #ccc;
+        }
+        .col{
+            width:50%;
+            float:left;
+            padding:0 50px;
+            margin-top:6px;
+        }
+
+        .face{background:#3B5998}
+        .twitter{background:#55ACEE}
+        .google{background:#dd4b39}
+        .hide-md-lg{
+            display:none;
+        }
+        .bottom-container{
+            background:#474e5d;
+            border-radius:5px;
+        }
+        @media screen and (max-width:600px){
+            .vl{display:none;}
+            .hide-md-lg{display:block;}
+            .col{
+                float:none;
+                display:block;
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Responsive Social Login Form</h1>
+<p>Resize the browser window to see the responsive effect. When the screen is less than 650px wide
+make the two columns tack on top of each other instead of next to each other.</p>
+<div class="container">
+    <form action="">
+        <div class="row">
+            <h2 style="text-align:center">Login with Social Media or Manually</h2>
+            <div class="vl">
+                <span class="vl-inertext">or</span>
+            </div>
+            <div class="col">
+                <a href="#face" class="face btn"><i class="fa fa-facebook" aria-hidden="true"></i> Login with Facebook</a>
+                <a href="#twitter" class="twitter btn"><i class="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</a>
+                <a href="#google" class="google btn"><i class="fa fa-google" aria-hidden="true"></i> Login with Google+</a>
+            </div>
+            <div class="col">
+                <div class="hide-md-lg">
+                    <p>Or sign in manually:</p>
+                </div>
+                <input type="text" name="name" placeholder="Username">
+                <input type="password" name="psw" placeholder="Password">
+                <input type="submit" value="Login">
+            </div>
+        </div>
+    </form>
+</div>
+<div class="bottom-container">
+    <div class="row">
+        <div class="col">
+            <a href="#" style="text-align:center" class="btn">Sign up</a>
+        </div>
+        <div class="col">
+            <a href="#" style="text-align:center" class="btn">Forgot Password?</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

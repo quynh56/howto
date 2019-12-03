@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filter 03</title>
+    <style type="text/css">
+        .btn{
+            color:black;
+            background:#f1f1f1;
+            padding:16px;
+            text-align:center;
+            border:none;
+            margin-bottom:20px;
+        }
+        .btn:hover{
+            background:#ddd;
+        }
+        .btn.active{
+            background:#666;
+            color:white;
+        }
+        .filterDiv{
+            color:white;
+            text-align:Center;
+            width:100px;
+            line-height:100px;
+            float:left;
+            background-color:#2196F3;
+            font-size:17px;
+            margin:2px;
+            display:none;
+        }
+        .show{display:block}
+    </style>
+</head>
+<body>
+<div class="header">
+    <h2>Filter DIV Element</h2>
+   <div id="mybtn">
+       <button class="btn active" onclick="filterSelection('all')">Show all</button>
+       <button class="btn" onclick="filterSelection('cars')">Cars</button>
+       <button class="btn" onclick="filterSelection('animals')">Animals</button>
+       <button class="btn" onclick="filterSelection('fruits')">Fruits</button>
+       <button class="btn" onclick="filterSelection('colors')">Colors</button>
+   </div>
+</div>
+<div class="container">
+    <div class="filterDiv cars">BMW</div>
+    <div class="filterDiv colors fruits">Orange</div>
+    <div class="filterDiv cars">Volvo</div>
+    <div class="filterDiv colors">Red</div>
+    <div class="filterDiv cars animals">Mustang</div>
+    <div class="filterDiv colors">Blue</div>
+    <div class="filterDiv animals">Cat</div>
+    <div class="filterDiv animals">Dog</div>
+    <div class="filterDiv fruits">Melon</div>
+    <div class="filterDiv fruits animals">Kiwi</div>
+    <div class="filterDiv fruits">Banana</div>
+    <div class="filterDiv fruits">Lemon</div>
+    <div class="filterDiv animals">Cow</div>
+</div>
+<script>
+    filterSelection('all')
+    function filterSelection(c){
+        var x,i;
+         x = document.getElementsByClassName("filterDiv");
+         if(c == 'all') c = "";
+         for(i = 0; i < x.length; i++){
+             w3RemoveClass(x[i], "show");
+             if(x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+         }
+    }
+    function w3AddClass(element,name){
+        var i , arr1, arr2;
+        arr1 =element.className.split(" ");
+        arr2 = name.split(" ");
+        for(i = 0; i < arr2.length; i++){
+           if(arr1.indexOf(arr2[i]) == -1){
+               element.className += " " + arr2[i];
+           }
+        }
+    }
+    function w3RemoveClass(element,name){
+        var i , arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 =name.split(" ")
+        for(i = 0 ; i < arr2.length; i++){
+            while(arr1.indexOf(arr2[i]) > -1){
+                arr1.splice(arr1.indexOf(arr2[i]),1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+    var btn =document.getElementsByClassName("btn");
+    var i;
+    for(i = 0; i < btn.length; i++){
+        btn[i].addEventListener("click",function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace("active", "");
+            this.className += " active";
+        });
+    }
+</script>
+</body>
+</html>

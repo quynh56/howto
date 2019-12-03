@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 07</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        body{font-family:Arial}
+        *{box-sizing:border-box}
+        form{
+            max-width:500px;
+            margin:auto;
+        }
+        .icon-container{
+            width:100%;
+            margin:15px 0;
+            display:-ms-flex;
+            display:flex;
+        }
+        .fa{
+            padding:10px;
+            background:dodgerblue;
+            color:white;
+           text-align:center;
+            min-width:50px;
+        }
+        input{
+           width:100%;
+            padding:10px;
+            outline:none
+        }
+        input:focus{
+            border:2px solid dodgerblue;
+        }
+        input[type="submit"]{
+            text-align:Center;
+            background:dodgerblue;
+            border:none;
+            color:white;
+            opacity:0.9
+        }
+        input[type="submit"]:hover{opacity:1;}
+    </style>
+</head>
+<body>
+<form action="">
+    <h1>Register Form</h1>
+   <div class="icon-container">
+       <i class="fa fa-user " aria-hidden="true" ></i>
+       <input type="text" name="username" placeholder="Username" required>
+   </div>
+    <div class="icon-container">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <input type="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="icon-container">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <input type="password" name="psw" placeholder="Password" required>
+    </div>
+    <div clas="icon-container">
+        <input type="submit" value="Register">
+    </div>
+</form>
+</body>
+</html>

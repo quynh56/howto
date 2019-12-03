@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 10</title>
+    <style type="text/css">
+        body{font-family:Arial}
+        .container{
+            background: #f1f1f1;
+            border-radius:5px;
+            width:100%;
+            padding:30px 25px;
+            font-size:17px;
+            float:left;
+        }
+        *{box-sizing:border-box;}
+        .row:after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+        .col-25{
+            width:25%;
+           margin:8px 0;
+            float:left;
+        }
+        .col-75{
+            width:75%;
+            margin:8px 0;
+            float:left;
+        }
+        label{
+            padding:12px 12px 12px 0;
+            display:inline-block;
+        }
+        input,select,textarea{
+            width:100%;
+            padding:12px;
+            border-radius:5px;
+            border:1px solid #ccc;
+            outline:none;
+        }
+        .btn{
+            width:auto;
+            padding:18px 24px;
+            text-align:Center;
+            background:#4CAF50;
+            color:white;
+            border:none;
+            border-radius:5px;
+            outline:none;
+        }
+        .btn:hover{background:#45a049}
+        @media screen and (max-width:700px){
+            .col-25,.col-75{
+                float:none;
+                display:block;
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>Responsive Form</h2>
+<p>Resize the browser window to see the effect. When the screen is less than 600px wide,
+make the two columns stack on top of each instead of next to each other</p>
+<div class="container">
+    <form action="">
+        <div class="row">
+            <div class="col-25">
+                <label>First Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="fname" placeholder="Your name.." required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="lname" placeholder="You last name..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="country">Country</label>
+            </div>
+            <div class="col-75">
+                <select name="country" id="country">
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="US">US</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+                <textarea name="message" id="mess" cols="30" rows="10" placeholder="Write something.."></textarea>
+            </div>
+        </div>
+        <div class="row" style="float:right;">
+            <input type="submit" value="Submit" class="btn">
+        </div>
+    </form>
+</div>
+</body>
+</html>

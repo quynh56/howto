@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 04</title>
+    <style type="text/css">
+        body{
+            margin:10px;
+            font-family:Arial;
+        }
+        *{box-sizing:border-box}
+        .container{
+            background:#f2f2f2;
+            padding:20px;
+            font-size:16px;
+            border-radius:3px;
+        }
+        input[type="text"],select[name="country"],#mess{
+            width:100%;
+            margin-top:5px;
+            margin-bottom:16px;
+            padding:12px;
+            border-radius:3px;
+            border:1px solid #ccc;
+        }
+        .btn{
+            padding:12px 20px;
+            border:none;
+            background:#4CAF50;
+            color:white;
+            border-radius:4px;
+        }
+        .btn:hover{
+            background:#45a049;
+        }
+    </style>
+</head>
+<body>
+<h2>Contact Form</h2>
+ <div class="container">
+     <form action="">
+         <label for="fname">First Name</label>
+         <input type="text" name="fname" placeholder="Your name..">
+         <label for="lname">Last Name</label>
+         <input type="text" name="lname" placeholder="You last name..">
+         <label for="country">Country</label>
+         <select name="country" id="">
+             <option value="Australia">Australia</option>
+             <option value="Canada">Canada</option>
+             <option value="US">US</option>
+         </select>
+         <label for="subject">Subject</label>
+         <textarea name="message" id="mess" cols="30" rows="10" placeholder="Write something..">
+
+         </textarea>
+         <input type="submit" class="btn" value="submit">
+     </form>
+ </div>
+</body>
+</html>

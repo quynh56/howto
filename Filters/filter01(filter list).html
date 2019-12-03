@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filter 01</title>
+    <style type="text/css">
+        *{box-sizing:border-box}
+        #myInput{
+            background:white;
+            padding:12px 20px 12px 50px;
+            width:100%;
+            border:1px solid #ddd;
+            font-size:17px;
+            background-image: url("img/icon-search.png");
+            background-repeat: no-repeat;
+            background-size:40px;
+            margin-bottom:12px;
+           /* background-position: 10px 12px;
+
+            */
+        }
+        #myUL{
+            background:#f1f1f1;
+            width:100%;
+            padding:0;
+            margin:0;
+        }
+        #myUL li{
+            border:1px solid #ddd;
+            list-style:none;
+            padding:15px 20px;
+        }
+        #myUL li a{
+            text-decoration:none;
+            color:black;
+            font-size:17px;
+        }
+        #myUL li:hover{background:#ddd}
+    </style>
+</head>
+<body>
+<h2>My Phonebook</h2>
+<input type="text" placeholder="Search for names.." title="Type in a name" onkeyup="myFunction();" id="myInput">
+<ul id="myUL">
+    <li><a href="#adele">Adele</a></li>
+    <li><a href="#agnes">Agnes</a></li>
+    <li><a href="#billy">Billy</a></li>
+    <li><a href="#bob">Bob</a></li>
+    <li><a href="#calvin">Calvin</a></li>
+    <li><a href="#christina">Christina</a></li>
+    <li><a href="#cindy">Cindy</a></li>
+</ul>
+<script>
+    function myFunction(){
+        var input, li,a,i,ul,filter,txtValue;
+        input =document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul=document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for(i = 0; i < li.length; i++){
+           a = li[i].getElementsByTagName("a")[0];
+           txtValue = a.textContent || a.innerText;
+           if(txtValue.toUpperCase().indexOf(filter) >-1){
+               li[i].style.display ="";
+           }else{
+               li[i].style.display ="none";
+           }
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 11</title>
+    <style type="text/css">
+        body{
+            font-family: Arial;
+             font-size:17px;
+        }
+        *{box-sizing:border-box;}
+        .openbtn{
+            position:fixed;
+            bottom:30px;
+            right:30px;
+            text-align:Center;
+            color:white;
+            background:#555;
+            opacity:0.85;
+            width:300px;
+            padding:16px;
+            border:none;
+        }
+        .container{
+            max-width:300px;
+            border:2px solid #ccc;
+            height:auto;
+            position:fixed;
+            bottom:5px;
+            right:15px;
+            display:none;
+            padding:20px 10px;
+        }
+        label{
+            font-weight:bold;
+            display:inline-block;
+            margin-top:10px;
+        }
+        input{
+            border:none;
+            padding:12px;
+            margin:8px 0;
+            width:100%;
+            background:#dddddd;
+        }
+        .btn{
+            width:100%;
+            border:none;
+            padding:12px;
+            text-align:Center;
+            font-size:17px;
+            background:#4CAF50;
+            opacity:0.85;
+            margin:10px 0;
+            color:white;
+        }
+        .close{background:red}
+        .btn:hover, .openbtn:hover{opacity:1;}
+    </style>
+</head>
+<body>
+<h2>Popup Form</h2>
+<p>Click on the button at the bottom of this page to open the contact form.</p>
+<p>Note that the button and the form is fixef -they will always be positioned to the bottom of the browser window.</p>
+<button onclick="openForm();" class="openbtn" id="openbutton">Open Form</button>
+<div class="container" id="myForm">
+    <form action="">
+        <h1>Login</h1>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <label for="password">Password</label>
+        <input type="password" name="psw" placeholder="Enter Password" required>
+        <button type="submit" class="btn">Login</button>
+        <button onclick="closeForm()" class="btn close">Close</button>
+    </form>
+</div>
+
+<script>
+   var myForm =document.getElementById("myForm");
+   var openbtn =document.getElementById("openbutton");
+   function openForm(){
+       myForm.style.display ="block";
+       openbtn.style.display="none";
+   }
+   function closeForm(){
+       myForm.style.display= "none";
+        openbtn.style.display="block";
+   }
+</script>
+</body>
+</html>

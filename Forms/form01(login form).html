@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 01</title>
+    <style type="text/css">
+        button{
+            border:none;
+            text-align:Center;
+            color:white;
+            padding:16px 20px;
+            background: #4CAF50;
+            width:100%;
+            margin:8px 0;
+            font-size:20px;
+        }
+        button:hover{opacity:0.6}
+        .modal{
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1;
+            width:100%;
+            height:100%;
+            overflow:auto;
+            background:#474e5d;
+            padding-top:60px;
+            display:none;
+        }
+        .modal-content{
+            width:80%;
+            margin:15% auto 15% auto;
+            background: #fefefe;
+            border:1px solid #888;
+            font-size:20px;
+        }
+        .header{
+            padding:20px;
+            position:relative;
+            text-align:Center;
+        }
+        .header img{
+            width:300px;
+            height:300px;
+            border-radius:50%;
+            vertical-align: middle;
+        }
+        .header .icon{
+            position:absolute;
+            right:25px;
+            top:15px;
+            font-weight:bold;
+            font-size:30px;
+            cursor:pointer;
+        }
+        .icon:hover, .icon:focus{color:red;}
+        .content{
+            padding:20px;
+            width:95%;
+            overflow:hidden;
+        }
+        input[type='text'],input[type="password"]{
+            font-size:16px;
+            width:100%;
+            padding: 16px;
+            display:inline-block;
+            margin:8px 0;
+            box-sizing:border-box;
+        }
+        label{
+            font-weight:bold;
+        }
+        .footer{
+            background:#ddd;
+            padding:35px 20px;
+        }
+        .btn{
+            background:red;
+            color:white;
+            text-align:Center;
+            width:auto;
+        }
+        .right{
+            padding-top:20px;
+            float:right;
+        }
+        .animate{
+            -webkit-animation:animatezoom 0.6s;
+            animation:animatezoom 0.6s;
+        }
+        @-webkit-keyframes animatezoom {
+            from{-webkit-transform:scale(0)}
+            to{-webkit-transform: scale(1)}
+
+        }
+        @keyframes animatezoom {
+            from{transform:scale(0)}
+            to {transform:scale(1)}
+        }
+        @media screen and (max-width:600px){
+           .header img{
+                width:100px;
+                height:100px;
+            }
+           .content{width:90%;}
+            .modal-content,input[type='text'],input[type="password"],.btn,button{
+                font-size:15px;
+            }
+        }
+        @media screen and(max-width:300px){
+            span.psw{
+                display:block;
+                float:none;
+            }
+            .btn{width:100%;}
+        }
+
+    </style>
+</head>
+<body>
+<h2>Modal Login Form</h2>
+<button style="width:auto" onclick="document.getElementById('id01').style.display='block'">Login</button>
+<div class="modal" id="id01">
+    <form action="" class="modal-content">
+       <div class="header">
+           <span class="icon" onclick="document.getElementById('id01').style.display='none'">&times;</span>
+           <img src="img/img01.jpg" alt="">
+       </div>
+        <div class="content">
+            <label>Username</label>
+            <input type="text" name="name" placeholder="Enter Username" required>
+            <label>Password</label>
+            <input type="password" name="psw" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+            <br>
+            <input type="checkbox">Remember me
+        </div>
+        <div class="footer">
+            <button  class="btn" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+            <div class="right">
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    //lấy phương thức
+    var modal =document.getElementById("id01");
+    // khi người dùng nhấp vào bất cứ nơi nào bên ngoài phương thức,hãy đóng nó
+    window.onclick=function(event){
+        if(event.target == modal){
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

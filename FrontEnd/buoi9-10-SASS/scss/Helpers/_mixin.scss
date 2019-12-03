@@ -1,0 +1,10 @@
+@mixin button ($color, $bg-color, $border-color, $color-hover, $bg-color-hover, $border-color-hover){
+  color:$color;
+  background:$bg-color;
+  border:1px solid $border-color;
+  &:hover{
+    color:$color-hover;
+    background:$bg-color-hover;
+    border-color:$bg-color-hover;
+  }
+}

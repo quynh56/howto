@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filters 02</title>
+    <style type="text/css">
+        *{box-sizing:border-box}
+        #myInput{
+            padding:12px 20px 12px 50px;
+            font-size:17px;
+            border:1px solid #ddd;
+            width:100%;
+            background:white;
+            margin-bottom:15px;
+            background-image: url("img/icon-search.png");
+            background-size:40px;
+            background-repeat:no-repeat;
+        }
+        #myTable{
+            width:100%;
+            border-collapse:collapse;
+        }
+        #myTable .header{
+            background: #f1f1f1;
+        }
+        #myTable th,td{
+            padding:15px 20px;
+            font-size:17px;
+            text-align:left;
+            cursor:pointer;
+        }
+        #myTable  tr{
+            border:1px solid #ddd;
+        }
+        #myTable tr:hover{
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+<h2>My Customers</h2>
+<input type="text" id="myInput" onkeyup="myFunction()" title="Type in a name" placeholder="Search for names...">
+<table id="myTable">
+    <tr class="header">
+        <th style="width:60%">Name</th>
+        <th style="width:40%">Country</th>
+    </tr>
+    <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Berlunds snabbkop</td>
+        <td>Sweden</td>
+    </tr>
+    <tr>
+        <td>Island Trading</td>
+        <td>UK</td>
+    </tr>
+    <tr>
+        <td>Koniglich Essen</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Laughing Bacchus Winecellars</td>
+        <td>Canada</td>
+    </tr>
+    <tr>
+        <td>Magazzini Alimentaru Riuniti</td>
+        <td>Italu</td>
+    </tr>
+    <tr>
+        <td>North/South</td>
+        <td>UK</td>
+    </tr>
+    <tr>
+        <td>Paris specialites</td>
+        <td>France</td>
+    </tr>
+</table>
+<script>
+    function myFunction(){
+        var tr, table, input, i, td, filter,textValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table =document.getElementById("myTable");
+        tr =table.getElementsByTagName("tr");
+        for(i = 0; i < tr.length; i++){
+            td =tr[i].getElementsByTagName("td")[0];
+            if(td){
+                textValue = td.textContent || td.innerText;
+                if(textValue.toUpperCase().indexOf(filter) > -1){
+                    tr[i].style.display ="";
+                }else{
+                    tr[i].style.display ="none";
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

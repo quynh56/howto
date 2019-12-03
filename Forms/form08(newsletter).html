@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 08</title>
+    <style type="text/css">
+        body{font-family:Arial}
+        form{
+            border:3px solid #f1f1f1;
+        }
+        .container{
+            background:#f1f1f1;
+            padding:30px 20px;
+
+        }
+        input[type="text"],input[type="submit"],input[type="email"]{
+            padding:12px;
+            display:inline-block;
+            width:100%;
+            margin-bottom:20px;
+            box-sizing:border-box
+        }
+        input[type="submit"]{
+            text-align:Center;
+            color:white;
+            background:#4CAF50;
+            opacity:1;
+            border:none
+        }
+        input[type="submit"]:hover{
+            opacity:0.85;
+        }
+        input[type="checkbox"]{
+            margin-top:16px;
+        }
+    </style>
+</head>
+<body>
+<h2>CSS Newsletter</h2>
+<form action="">
+    <div class="container">
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Lorem ipsum text about why you should subcribe to our newsletter blabla. Lorem
+        ipsum text about why you should subscribe to our newsletter blabla.</p>
+    </div>
+    <div class="container" style="background:white">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email address">
+        <label for=""><input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter</label>
+    </div>
+    <div class="container">
+        <input type="submit" value="Subscribe">
+    </div>
+</form>
+</body>
+</html>

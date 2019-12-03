@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 14</title>
+    <style type="text/css">
+        .tooltip{
+            position:relative;
+            display:inline-block;
+        }
+        .tooltip .tooltiptext{
+            visibility:hidden;
+            position:absolute;
+            background:#555;
+            color:#fff;
+            padding:5px;
+            text-align:Center;
+            border-radius:6px;
+            bottom:150%;
+            left:50%;
+            margin-left:-75px;
+            z-index:1;
+            width:150px;
+            transition:opacity 0.3s;
+            opacity:0;
+        }
+        .tooltip .tooltiptext::after{
+            content:"";
+            position:absolute;
+            top:100%;
+            left:50%;
+            margin-left:-5px;
+            border-width:5px;
+            border-style:solid;
+            border-color:#555 transparent transparent transparent;
+        }
+        .tooltip:hover .tooltiptext{
+            opacity:1;
+            visibility:visible;
+        }
+    </style>
+</head>
+<body>
+<p>Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards
+in a different window, to see the effect.</p>
+<input type="text" name="text" value="Hello World" id="myInput">
+<div class="tooltip">
+    <button onclick="myFunction()" onmouseout="outFunc()">
+        <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+        Copy text
+    </button>
+</div>
+<p>The document.execCommand() method is not supported in IE8 and earlier</p>
+<script>
+    function myFunction(){
+        var copytext =document.getElementById("myInput");
+        copytext.select();
+        document.execCommand("copy");
+        var tooltip =document.getElementById("myTooltip");
+        tooltip.innerHTML="Copied: " +copytext.value;
+    }
+    function outFunc(){
+        var tooltip =document.getElementById("myTooltip");
+        tooltip.innerHTML =" Copy to clipboard";
+    }
+
+</script>
+</body>
+</html>

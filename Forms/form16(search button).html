@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 16</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        *{box-sizing:border-box}
+        .example{
+            width:100%;
+            display:inline-block;
+        }
+        input{
+            width:80%;
+            padding:16px 20px;
+            background:#f2f2f2;
+            border:1px solid #ccc;
+            float:left;
+            font-size:17px;
+        }
+        button{
+            width:20%;
+            padding:16px;
+            color:white;
+            border-left:none;
+            background:dodgerblue;
+            border:1px solid #ccc;
+            float:left;
+            font-size:17px;
+        }
+        button:hover{background:royalblue}
+        .example:after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+<h2>Search Button</h2>
+<p>Full width:</p>
+<form action="" class="example">
+    <input type="text" name="search" placeholder="Search..">
+    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+</form>
+<p>Centerd inside a form with max-width:</p>
+<form action="" class="example" style="width:50%;margin:auto 30%">
+    <input type="text" name="search2" placeholder="Search..">
+    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+</form>
+</body>
+</html>

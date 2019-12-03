@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 12</title>
+    <style type="text/css">
+        body{
+            font-family:Arial;
+            font-size:20px;
+        }
+        *{box-sizing:border-box}
+        .content{
+            display:flex;
+            display:-ms-flexbox;
+            flex-flow:row wrap;
+            align-items:center;
+        }
+        input{
+            padding:12px;
+            margin:8px 5px;
+        }
+        input[type="submit"]{
+            border:none;
+            background:dodgerblue;
+            color:white;
+            padding:16px 24px;
+        }
+        input[type="submit"]:hover{
+            background:royalblue;
+        }
+        label{
+            display:inline-block;
+            float:left;
+        }
+        @media screen and (max-width:800px){
+            .content{
+               flex-direction: column;
+                align-items:stretch;
+            }
+            input{
+               margin:10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>Responsive Inline Form</h2>
+<p>We have creates an inline form that will stay horizontal until the screen width of the browser window is less than 850 pixels:
+then the form is displayed vertically instead of horizontally</p>
+<p>Resize the browser window to see the effect</p>
+<form action="" class="content">
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="Enter email" required>
+    <label for="password">Password:</label>
+    <input type="password" name="psw" placeholder="Enter password" required>
+    <label>
+        <input type="checkbox" name="remember">Remember me
+    </label>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filters 05.2</title>
+</head>
+<body>
+<p>Click the button to sort the list ascending (A to Z):</p>
+<p>Click again to sort the list descending (Z to A):</p>
+<button onclick="sortListDir()">Sort</button>
+<ul id="id01">
+    <li>Oslo</li>
+    <li>Stockholm</li>
+    <li>Helsinki</li>
+    <li>Berlin</li>
+    <li>Rome</li>
+    <li>Madrid</li>
+</ul>
+<script>
+    function sortListDir(){
+        var list, i, switching, shouldSwitch,b,dir,switchcount =0;
+        list=document.getElementById("id01");
+        switching = true;
+        //đặt hướng sắp xếp theo chiều tăng dần
+        dir ="asc";
+        //tạo 1 vòng lặp sẽ tiếp tục cho đến khi không có chuyển đổi nào thực hiện
+        while(switching){
+            switching = false;
+            b = list.getElementsByTagName("LI");
+            //lặp qua tất cả các mục danh sách
+            for(i = 0; i < (b.length - 1); i++){
+                //bắt đầu cách nói không nên có shouldSwitch (chuyển đổi)
+                shouldSwitch =false;
+                //kiểm tra xem mục tiếp theo có chuyển vị trị với mục hiện tại không, dựa vào hướng sắp xếp (asc hoặc desc)
+                if(dir == "asc"){
+                    if(b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()){
+                        //nếu mục tiếp theo thấp hơn bảng chữ cái so vs mục hiện tại, đánh dấu là 1 công tắc và break vòng lặp
+                        shouldSwitch =true;
+                        break;
+                    }
+                }else if(dir == "desc"){
+                    if(b[i].innerHTML.toLowerCase() < b[i +1].innerHTML.toLowerCase()){
+                        shouldSwitch =true;
+                        break;
+                    }
+                }
+            }
+            if(shouldSwitch){
+                //nếu 1 switch đã được đánh dấu, hãy thực hiện chuyển đổi và đánh dấu rằng một switch đã được thực hiện
+                b[i].parentNode.insertBefore(b[i +1],b[i]);
+                switching =true;
+                //mỗi khi chuyển đổi xong, hãy tăng tổng số 1;
+                switchcount ++;
+            }else{
+                //nếu không có chuyển đổi nào được thực hiện và hướng là "asc", đặt hướng thành "desc" và chạy vòng lặp while
+                if(switchcount == 0 && dir == "asc"){
+                    dir = "desc";
+                    switching =true;
+                }
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

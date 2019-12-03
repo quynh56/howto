@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 28</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style type="text/css">
+        *{box-sizing:border-box}
+        body{
+            background:#f1f1f1;
+        }
+        #regForm{
+            width:70%;
+            min-width:300px;
+            margin:100px auto;
+            background:white;
+            padding:40px;
+        }
+        h1{text-align:Center}
+        input{
+            width:100%;
+            padding:16px;
+            font-size:17px;
+            font-family:Raleway;
+        }
+        .tab{display:none;}
+        input.invalid{background:#ffdddd}
+        #prevbtn,#nextbtn{
+            font-size:17px;
+            border:none;
+            color:white;
+            text-align:Center;
+            padding:10px 20px;
+            background:#bbb;
+            opacity:1;
+        }
+        #nextbtn{background:#4CAF50}
+        #prevbtn:hover,#nextbtn:hover{opacity:0.8}
+        .step{
+            width:15px;
+            height:15px;
+            border-radius:50%;
+            background:#bbb;
+            margin:0 2px;
+            display:inline-block;
+            opacity:0.5;
+        }
+        .step.active{
+            opacity:1;
+        }
+        .step.finish{
+            background:#4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<form action="" id="regForm">
+    <h1>Register:</h1>
+    <div class="tab">Name:
+        <p><input type="text" placeholder="First name..." oninput="this.className=''" name="fname"></p>
+        <p><input type="text" placeholder="Last name..." oninput="this.className=''" name="lname"></p>
+    </div>
+    <div class="tab">Contact Info:
+        <p><input type="email" placeholder="E-mail..." oninput="this.className=''" name="email"></p>
+        <p><input type="tel" placeholder="Phone..." oninput="this.className=''" name="phone"></p>
+    </div>
+    <div class="tab">Birthday:
+        <p><input placeholder="dd" oninput="this.className=''" name="dd"></p>
+        <p><input placeholder="mm" oninput="this.className=''" name="nn"></p>
+        <p><input placeholder="yyyy" oninput="this.className=''" name="yyyy"></p>
+    </div>
+    <div class="tab">Login Info
+        <p><input placeholder="Username..." oninput="this.className=''" name="uname"></p>
+        <p><input placeholder="Password..." oninput="this.className=''" name="psw" type="password"></p>
+    </div>
+    <div style="overflow:auto">
+        <div style="float:right">
+            <button type="button" id="prevbtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextbtn" onclick="nextPrev(1)">Next</button>
+        </div>
+        <div style="text-align:Center;margin-top:40px">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </div>
+</form>
+<script>
+    //tab hiện tại được đặt là tab đầu tiền currentTab=0
+    var currentTab =0;
+    //hiển thị tab hiện tại
+    showTab(currentTab);
+    function showTab(n){
+        //hàm này sẽ hiển thị tab được chỉ định của biểu mẫu..
+        var x =document.getElementsByClassName("tab");
+        x[n].style.display="block";
+        //...và sửa các nút prev/next
+        if(n == 0){
+            document.getElementById("prevbtn").style.display ="none";
+        }else{
+            document.getElementById("prevbtn").style.display="inline";
+        }
+        if(n == (x.length - 1)){
+            document.getElementById("nextbtn").innerHTML ="Submit";
+        }else{
+            document.getElementById("nextbtn").innerHTML ="Next";
+        }
+        //...và chạy một chức năng sẽ hiển thị chỉ bảo bước chính xác
+        fixStepIndicator(n);
+    }
+    function nextPrev(n){
+        //hàm này sẽ chỉ ra tab nào sẽ hiển thị
+        var x =document.getElementsByClassName("tab");
+        //thoát chức năng nếu bất kì trường nào trong tab hiện tại không hợp lệ
+        if( n == 1 && !validateForm()) return false;
+        //ẩn tab hiện tại
+        x[currentTab].style.display ="none";
+        //Tăng hoặc giảm tab hiện tại thêm 1
+        currentTab = currentTab + n;
+        //nếu ta đạt đến cuối mẫu
+        if(currentTab >= x.length){
+            //...mẫu sẽ được gửi
+            document.getElementById("regForm").submit();
+            return false;
+        }
+        showTab(currentTab);
+    }
+    function validateForm(){
+        //hàm này liên qua đến xác thực các trường biểu mẫu
+        var x,y,i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        //một vòng lăng kiểm tra mọi trường đầu vào trong tab hiện tại
+        for(i = 0; i < y.length; i++){
+            //nếu một trường trống...
+            if(y[i].value == ""){
+                //thêm một lớp class="invalid" vào trường
+                y[i].className += " invalid";
+                //.. và đặt trạng thái hợp lệ hiện tại thành false
+                valid =false;
+            }
+        }
+        //nếu trạng thái hợp lệ đúng, đánh dấu bước là kết thúc hợp lệ:
+        if(valid){
+            document.getElementsByClassName("step")[currentTab].className += " finish";
+        }
+        //trả về trạng thái hợp lệ
+        return valid;
+    }
+    function fixStepIndicator(n) {
+        //hàm này loại bỏ  remove "active" của tất cả các bước
+        var i, x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+        }
+        //... và thêm lớp class="active" ở bước hiện tại
+        x[n].className += " active";
+    }
+</script>
+</body>
+</html>

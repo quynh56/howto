@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms 20.1</title>
+    <style type="text/css">
+        .container{
+            position:relative;
+            display:block;
+            font-size:22px;
+            padding-left:35px;
+            margin-bottom:12px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .container input{
+            position:absolute;
+            opacity:0;
+            height:0;
+            width:0;
+            cursor:pointer;
+        }
+        .checkmark{
+            position:absolute;
+            top:0;
+            left:0;
+            width:25px;
+            height:25px;
+            background:#eee;
+        }
+        .container:hover input ~ .checkmark{
+            background:#cccccc;
+        }
+        .container input:checked ~ .checkmark {
+            background-color: #2196F3;
+        }
+        .checkmark:after{
+            content:"";
+            display:none;
+            position:absolute;
+        }
+        .container input:checked ~ .checkmark:after{
+            display:block;
+        }
+        .container .checkmark:after{
+            top:5px;
+            left:9px;
+            width:5px;
+            height:10px;
+            border-width:0px 3px 3px  0px ;
+            border-style:solid;
+            border-color: white;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform:rotate(45deg) ;
+            transform:rotate(45deg) ;
+        }
+    </style>
+</head>
+<body>
+<h1>Custom Checkboxes</h1>
+<label  class="container">One
+    <input type="checkbox" checked="checked">
+    <span class="checkmark"></span>
+</label>
+<label class="container">Two
+    <input type="checkbox">
+    <span class="checkmark"></span>
+</label>
+<label class="container">Three
+    <input type="checkbox" >
+    <span class="checkmark"></span>
+</label>
+<label class="container">Four
+    <input type="checkbox">
+    <span class="checkmark"></span>
+</label>
+</body>
+</html>
