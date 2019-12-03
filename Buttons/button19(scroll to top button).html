@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buttons 19</title>
+    <style type="text/css">
+        body{
+            margin:0;
+            height:auto;
+        }
+        #btn{
+            color:White;
+            padding:20px;
+            border:none;
+            border-radius:4px;
+            background:Red;
+            position:fixed;
+            bottom:25px;
+            right:25px;
+            font-size:17px;
+            display:none;
+            transition:0.5s;
+        }
+        #btn:hover{background:#555;}
+    </style>
+</head>
+<body>
+<button onclick="myFunction()" id="btn">Top</button>
+<div style="margin:0;font-size:25px;color:white; padding:40px;background:black">Scroll Down</div>
+<div style="background:#ddd; padding:40px;height:1500px">This example demonstrates how to create a "scroll to top" button that becomes visible when the user starts to scroll the page.</div>
+<script>
+    window.onscroll =function(){scrollFunction()};
+    function scrollFunction(){
+        btn =document.getElementById("btn");
+        if(document.body.scrollTop > 20 || document.documentElement.scrollTop >20){
+            btn.style.display ="block"
+        }else{
+            btn.style.display ="none";
+        }
+    }
+    function myFunction(){
+        document.body.scrollTop =0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+</body>
+</html>

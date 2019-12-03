@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buttons 03</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        button{
+            color:white;
+            background:#2196F3;
+            border:1px solid #0b7dda;
+            text-align:Center;
+            font-size:17px;
+            padding:18px 14px;
+        }
+        .dropdown{
+            position:absolute;
+            display:inline-block;
+            float:left;
+        }
+        .dropbtn{
+            border-left:none;
+        }
+        .drop-content{
+            position:absolute;
+            display:none;
+            background:#e7e7e7;
+        }
+        .drop-content a{
+            display:block;
+            width:200px;
+            padding:16px 12px;
+            text-decoration:none;
+            text-align:left;
+            color:black;
+        }
+        button:hover ,.dropdown:hover .dropbtn{
+            background:#0b7dda;
+        }
+        .dropdown:hover .drop-content{
+            display:block;
+        }
+        .drop-content a:hover{
+            background:#dddddd;
+        }
+    </style>
+</head>
+<body>
+<h1>Split Button Dropdowns</h1>
+<p>Move the mouse over the arrow uicon to open the dropdown menu</p>
+<div class="menu">
+    <button>Button</button>
+   <div class="dropdown">
+       <button class="dropbtn"><i class="fa fa-sort-desc" aria-hidden="true"></i></button>
+       <div class="drop-content">
+           <a href="#">Link 1</a>
+           <a href="#">Link 2</a>
+           <a href="#">Link 3</a>
+       </div>
+   </div>
+</div>
+</body>
+</html>
