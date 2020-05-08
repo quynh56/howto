@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 83</title>
+    <style type="text/css">
+        *{box-sizing:border-box}
+        .container{
+            position:fixed;
+            top:0;
+            bottom:0;
+            width:50%;
+            overflow:hidden;
+        }
+        .left{
+            left:0;
+            background:black;
+        }
+        .right{
+            right:0;
+            background:red;
+        }
+        .content{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            color:white;
+        }
+        img{
+            width:100px;
+            height:100px;
+            border-radius:50%;
+        }
+    </style>
+</head>
+<body>
+<div class="container left">
+    <div class="content">
+        <img src="img/img02.jpg" alt="">
+        <h2>Jane Flex</h2>
+        <p>Some text.</p>
+    </div>
+</div>
+<div class="container right">
+    <div class="content">
+        <img src="img/img06.jpg" alt="">
+        <h2>John Doe</h2>
+        <p>Some text here too.</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid 04</title>
+    <style type="text/css">
+        body{
+            margin:0;
+            font-family:Arial;
+        }
+        *{box-sizing:border-box}
+        .column{
+            flex:33.33%;
+            cursor:pointer;
+            color:white;
+            text-align:center;
+            line-height:150px;
+            font-size:25px;
+            font-weight:bold;
+        }
+        .row{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .row::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        #b1{background:green;}
+        #b2{background:blue;}
+        #b3{background:red;}
+        .container{
+            width:100%;
+            color:white;
+            padding:20px;
+            display:none;
+        }
+        .close{
+            font-size:35px;
+            cursor:pointer;
+            font-weight:bold;
+            float:right;
+        }
+    </style>
+</head>
+<body>
+<h2>Expanding Grid</h2>
+<p>Click on the boxes below:</p>
+<div class="row">
+    <div class="column" onclick="openTab('b1');" style="background:green">Box 1</div>
+     <div class="column" onclick="openTab('b2')"  style="background:blue">Box 2</div>
+    <div  style="background:red" class="column" onclick="openTab('b3')">Box 3</div>
+</div>
+<div id="b1" class="container">
+    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+    <h2>Box 1</h2>
+    <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div>
+<div id="b2" class="container">
+    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+    <h2>Box 1</h2>
+    <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div>
+<div id="b3" class="container">
+    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+    <h2>Box 1</h2>
+    <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div>
+<script>
+    function openTab(tabName){
+        var i,x;
+        x = document.getElementsByClassName("container");
+        for(i = 0; i < x.length; i++){
+            x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display ="block";
+    }
+</script>
+</body>
+</html>

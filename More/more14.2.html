@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 14.2</title>
+    <style type="text/css">
+        .loader{
+            width:120px;
+            height:120px;
+            border:16px solid #f3f3f3;
+            border-top:16px solid blue;
+            border-right:16px solid #4caf50;
+            border-bottom:16px solid #f44336;
+            border-radius:50%;
+            -webkit-animation: fadeIn 2s linear infinite;
+            animation:fadeIn 2s linear infinite;
+        }
+        @-webkit-keyframes fadeIn {
+            0%{
+                -webkit-transform:rotate(0deg);
+                transform:rotate(0deg);
+            }
+            100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>How to create a loader</h2>
+<div class="loader"></div>
+</body>
+</html>

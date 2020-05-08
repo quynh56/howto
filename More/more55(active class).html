@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 55</title>
+    <style type="text/css">
+        .btn{
+            border:none;
+            font-size:18px;
+            background: #f1f1f1;
+            padding:10px 16px;
+            cursor:pointer;
+        }
+        .btn:hover ,.active{
+            color:white;
+            background:#555;
+        }
+    </style>
+</head>
+<body>
+<h1>Active Button</h1>
+<p>Highlight the active/current (pressed) button</p>
+<button class="btn active">1</button>
+<button class="btn">2</button>
+<button class="btn">3</button>
+<button class="btn">4</button>
+<button class="btn">5</button>
+<script>
+    var x , i;
+    x =document.getElementsByClassName("btn");
+    for(i = 0 ; i < x.length; i++){
+        x[i].addEventListener("click",function(){
+            var current =document.getElementsByClassName("active");
+           if(current.length > 0){
+               current[0].className =current[0].className.replace("active"," ");
+           }
+           this.className += " active";
+        })
+    }
+</script>
+</body>
+</html>

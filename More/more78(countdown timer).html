@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 78</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+    //đặt ngày ta muốn đếm ngược đếm ngược
+    var countdown =new Date("Jan 05, 2021 15:15:15").getTime();
+    //cập nhật đếm ngược cứ sau 1s;
+    var x = setInterval(function(){
+        var now, hour, day, minute,second ,distance;
+        //nhận ngày giờ
+        now =new Date().getTime();
+        //tìm khoảng cách giữa bây giờ và ngày đếm ngược
+        distance =countdown - now;
+        //tính toàn thời gian cho ngày, giờ, phút,giây
+        day = Math.floor(distance / (1000*60*60*24));
+        hour = Math.floor((distance %(1000*60*60*24)) / (1000*60*60));
+        minute =Math.floor((distance %(1000*60*60)) / (1000*60));
+        second =Math.floor((distance % (1000*60)) / 1000);
+        //xuất kết quả trong 1 phần tử có id ="demo"
+        document.getElementById("demo").innerHTML =day +"d " +hour +"h " +minute +"m " +second +"s";
+        //nếu quá trình đếm ngược kết thúc, hãy viết 1 văn bản
+        if(distance < 0){
+            clearInterval(x);
+            document.getElementById("demo").innerHTML ="EXPIRED";
+        }
+    }, 1000);
+</script>
+</body>
+</html>

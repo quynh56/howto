@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images 22</title>
+    <style type="text/css">
+        .row:after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+        .column{
+            float:left;
+            width:33.33%;
+            padding:5px;
+        }
+        @media screen and (max-width:500px){
+           .column{
+               float:none;
+               display:block;
+               width:100%;
+           }
+        }
+    </style>
+</head>
+<body>
+<h1>Responsive "side-by-side" Images</h1>
+<p>How to create side-by-side images with the CSS float property. On screens that are 500px wide or less, thes images
+will stack on top of each other instead of next to each other:</p>
+<p>Resize the browser window to see</p>
+<div class="row">
+    <div class="column">
+        <img src="img/img01.jpg" style="width:100%" alt="">
+    </div>
+    <div class="column">
+        <img src="img/img02.jpg" style="width:100%" alt="">
+    </div>
+    <div class="column">
+        <img src="img/img05.jpg" style="width:100%" alt="">
+    </div>
+</div>
+</body>
+</html>

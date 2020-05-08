@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 86</title>
+    <style type="text/css">
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .container{
+            position:relative;
+            background:#f1f1f1;
+        }
+        .mySlide{
+            padding:80px ;
+            text-align:center;
+            display:none;
+        }
+        .prev ,.next{
+            position:absolute;
+            top:50%;
+            padding:16px;
+            color:#888;
+            font-size:20px;
+            font-weight:bold;
+            text-decoration:none;
+           margin-top:-30px;
+            border-radius:0 3px 3px 0;
+            cursor:pointer;
+        }
+        .next{
+            right:0;
+            border-radius:3px 0 0 3px
+        }
+        .prev:hover, .next:hover{
+            color:White;
+            background:black;
+        }
+        .dot-container{
+            background:#ddd;
+            padding:20px;
+            text-align:center;
+        }
+        .dots{
+            width:16px;
+            height:16px;
+            margin:0 2px;
+            background:#bbb;
+            border-radius:50%;
+            display:inline-block;
+            cursor:pointer;
+            transition:background-color 0.5s ease;
+        }
+        .dots:hover, .active{
+            background:#717171;
+        }
+        q{font-style:italic}
+        .auther{color:dodgerblue}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="mySlide">
+        <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+        <p class="auther">-John Keats</p>
+    </div>
+    <div class="mySlide">
+        <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+        <p class="auther">-Ernest Hemingway</p>
+    </div>
+    <div class="mySlide">
+        <q>I have not failed. I've found 10,000 ways that won't work.</q>
+        <p class="auther">-Thomas A. Edison</p>
+    </div>
+    <a href="#" class="prev" onclick="plusSlides(-1)">❮</a>
+    <a href="#" class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<div class="dot-container">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+</div>
+<script>
+    var slideIndex =1;
+    showSlides(slideIndex);
+    function plusSlides(n){
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n){
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n){
+        var slides,i, dots;
+        dots = document.getElementsByClassName("dots");
+        slides = document.getElementsByClassName("mySlide");
+        if(n > slides.length){ slideIndex =1}
+        if(n < 1){slideIndex = slides.length}
+        for( i = 0; i< slides.length; i++){
+            slides[i].style.display ="none";
+        }
+        for(i = 0; i< dots.length; i++){
+            dots[i].className =dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex -1].style.display ="block";
+       dots[slideIndex-1].className +=" active";
+    }
+</script>
+</body>
+</html>

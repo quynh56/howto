@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 12</title>
+    <script>
+        function includeHTML(){
+            var z,i,elem,file,xhttp;
+            //lặp qua bộ sưu tập tất cả các thành phần HTML
+            z= document.getElementsByTagName("*");
+            for(i = 0; i < z.length; i++){
+                elem =z[i];
+                //Tìm kiếm các phần tử có thuộc  tính nhất định
+                file =elem.getAttribute("w3-include-html");
+                if(file){
+                    //tạo 1 yêu cầu http bằng cách sử dụng giá trị thuộc tính làm tên tệp
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange =function(){
+                        if(this.readyState ==4){
+                            if(this.status ==200){
+                                elem.innerHTML =this.responseText;
+                            }
+                            if( this.status ==404){
+                                elem.innerHTML = "page not found";
+                            }
+                            // xóa thuộc tính và gọi hàm này 1 lần nữa
+                            elem.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    };
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    //thoát chức năng
+                    return;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div w3-include-html="more12.2.html"></div>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

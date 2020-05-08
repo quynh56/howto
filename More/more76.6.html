@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>76.6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .fa{font-size:38px;}
+    </style>
+</head>
+<body>
+<div id="myDiv" class="fa"></div>
+<script>
+    function smile(){
+        var x= document.getElementById("myDiv");
+        x.innerHTML ="&#xf118;";
+        setTimeout(function(){x.innerHTML = "&#xf11a;";}, 1000);
+        setTimeout(function () {x.innerHTML ="&#xf119;";}, 2000);
+        setTimeout(function(){x.innerHTML ="&#xf11a;";}, 3000);
+    }
+    smile();
+    setInterval(smile, 4000);
+</script>
+<p>This example demonstrates how to use an icon library to make an animated effect.</p>
+</body>
+</html>

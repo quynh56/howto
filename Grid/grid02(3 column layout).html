@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grib 02</title>
+    <style type="text/css">
+        *{box-sizing:border-box}
+        .column{
+            width:33.33%;
+            float:left;
+            padding:20px 10px;
+            height:300px;
+        }
+        .row::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        @media screen and (max-width:600px){
+            .column{width:100px;}
+        }
+    </style>
+</head>
+<body>
+<h2>Responsive Two Column Layout</h2>
+<p>Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide).</p>
+<div class="row">
+    <div class="column" style="background:#bbb;">
+        <h2>Column 1</h2>
+        <p>Some text</p>
+    </div>
+    <div class="column" style="background:#ccc;">
+        <h2>Column 2</h2>
+        <p>Some text</p>
+    </div>
+    <div class="column" style="background:#ddd;">
+        <h2>Column 3</h2>
+        <p>Some text</p>
+    </div>
+</div>
+</body>
+</html>

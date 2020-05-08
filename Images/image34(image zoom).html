@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images 34</title>
+    <style type="text/css">
+        .img-zoom-container{position:relative;}
+        .img-zoom-lens{
+            position:absolute;
+            border:1px solid #d4d4d4;
+            width:40px;
+            height:40px;
+        }
+        .img-zoom-result{
+            border:1px solid #d4d4d4;
+            width:300px;
+            height:300px;
+        }
+    </style>
+    <script type="text/javascript">
+        function imageZoom(imgID,resultID){
+            var img,lens,result,cx,cy;
+            img=document.getElementById(imgID);
+            result =document.getElementById(resultID);
+            /*Tạo lens */
+            lens=document.createElement("DIV");
+            lens.setAttribute("class","img-zoom-lens");
+            /* chèn lens */
+            img.parentElement.insertBefore(lens, img);
+            /*Tính tỉ lệ giữa kết quả DIV và ống kính*/
+            cx = result.offsetWidth / lens.offsetWidth;
+            cy = result.offsetHeight / lens.offsetHeight;
+            /*Đặt thuộc tính background cho kết quả  DIV*/
+            result.style.backgroundImage = "url('" + img.src +"')";
+            result.style.backgroundSize = (img.width * cx) +"px" +(img.height * cy);
+            /*Thực hiện chức năng khi ai đó di chuyển con trỏ qu hình ảnh hoặc ống kính*/
+            lens.addEventListener("mousemove", moveLens);
+            img.addEventListener("mousemove", moveLens);
+            /*và cũng cho màn hình cảm ứng*/
+            lens.addEventListener("touchmove",moveLens);
+            img.addEventListener("touchmove", moveLens);
+            function moveLens(e){
+                var pos,x,y;
+                /*ngặn chặn mọi hoạt động khác có thế xảy ra khi di chuyển qua h/a */
+                e.preventDefault();
+                /*Lấy vị trí X và Y của con trỏ*/
+                pos = getCursorPos(e);
+                /*tính vị trí của ống kính(lens) */
+                x =pos.x - (lens.offsetWidth / 2);
+                y =pos.y - (lens.offsetHeight / 2);
+                /*Ngắn ống kính (lens) được đặt bên ngoài hình ảnh*/
+                if(x > img.width - lens.offsetWidth){x = img.width - lens.offsetWidth;}
+                if(x < 0){x=0;}
+                if(y > img.height -lens.offsetHeight){ y = img.height -lens.offsetHeight;}
+                if(y < 0){y = 0;}
+                /*đặt vị trí của ống kính lens*/
+                lens.style.left = x +"px";
+                lens.style.top = y + "px";
+                /*Hiển thị những gì ông kính(lens) nhìn thấy "sees"*/
+                result.style.backgroundPosition = "-" + (x*cx) + "px -" + (y*cy) +"px";
+            }
+            function getCursorPos(e){
+                var a, x=0,y=0;
+                e = e || window.event;
+                /*Lấy vị trí x và y của hình ảnh*/
+                a = img.getBoundingClientRect();
+                /*Tính tọa độ X và Y của con trỏ, liên qua đến hình ảnh*/
+                x =e.pageX -a.left;
+                y = e.pageY -a.top;
+                /*Xem xét bất kig cuộn trang nào page scrolling*/
+                x = x - window.pageXOffset;
+                y = y - window.pageYOffset;
+                return{x : x , y : y};
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Image Zoom</h1>
+<p>Mouse over the image</p>
+<div class="img-zoom-container">
+    <img src="img/img01.jpg" width="300px" height="300px" id="myimage" alt="one piece">
+    <div id="myresult" class="img-zoom-result"></div>
+</div>
+<p>The image must be placed inside a container with relative positioning.</p>
+<p>The result can be put anywhere on the page, but must have the class name "img-zoom-result".</p>
+<p>Make sure both the image and the result have IDs. These IDs are used when a javaScript initiates the zoom effect.</p>
+
+<script>
+    imageZoom("myimage","myresult");
+</script>
+</body>
+</html>

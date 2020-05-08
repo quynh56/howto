@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images 01</title>
+    <style type="text/css">
+        .slice-content{
+            overflow:hidden;
+            position:relative;
+            max-width:1000px;
+            margin:auto;
+        }
+        .myslides{display:none;}
+        img{vertical-align:center;}
+        .prev,.next{
+            cursor:pointer;
+            position:absolute;
+            top:50%;
+            width:auto;
+            padding:16px;
+            font-size:18px;
+            margin-top:-22px;
+            color:white;
+            font-weight:bold;
+            transition:0.6s ease;
+            border-radius:0 3px 3px 0;
+            user-select:none;
+        }
+        .next{
+            right:0;
+            border-radius:3px 0 0 3px;
+        }
+        .next:hover, .prev:hover{
+            background:rgba(0,0,0,0.8);
+        }
+        .text{
+            color:#f2f2f2;
+            font-size:15px;
+            padding:8px 12px;
+            position:absolute;
+            bottom:8px;
+            width:100%;
+            text-align:center;
+        }
+        .numbertext{
+            color:#f2f2f2;
+            font-size:12px;
+            padding:8px 12px;
+            position:absolute;
+            top:0;
+        }
+        .dot{
+            cursor:pointer;
+            height:15px;
+            width:15px;
+            margin:0 2px;
+            background:#bbb;
+            border-radius:50%;
+            display:inline-block;
+            transition:background-color 0.6s ease;
+        }
+        .active , .dot:hover{
+            background:#717171;
+        }
+        .fade{
+            -webkit-animation-name:fade;
+            -webkit-animation-duration:1.5s;
+            animation-name:fade;
+            animation-duration:1.5s;
+        }
+        @-webkit-keyframes fade {
+            from{opacity:0.4}
+            to{opacity:1}
+        }
+        @keyframes fade {
+            from{opacity:0.4}
+            to{opacity:1}
+        }
+    </style>
+</head>
+<body>
+<div class="slice-content">
+    <div class="myslides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/img01.jpg" alt="" style="width:100%">
+        <div class="text">Caption Text</div>
+    </div>
+    <div class="myslides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/img02.JPG" alt="" style="width:100%">
+        <div class="text">Caption Two</div>
+    </div>
+    <div class="myslides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/img03.jpg" alt="" style="width:100%">
+        <div class="text">Caption Three</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlides(1)"></span>
+    <span class="dot" onclick="currentSlides(2)"></span>
+    <span class="dot" onclick="currentSlides(3)"></span>
+</div>
+
+<script>
+    /*
+    - Khi load xong trang tự động gọi hàm showSlides() với biến slideIndex = 0, hàm này sẽ hiển thị slide sau đó tăng biến slideIndex lên một đơn vị, tiếp đến nếu không có thao tác mình sử dụng setTimeout(showSlides, 5000); để tự động chuyển slider sau 5s, khi này slideIndex = 1, và hàm showSlides() lại lặp lại quá trình đó.
+    - Nếu có thao tác vào các chấm, hàm currentSlide(n)  sẽ được gọi với tham số n truyền vào là trang slide muốn đến, đầu tiên ta gán lại biến slideIndex = n, sau đó gọi hàm showSlides().
+     */
+    var slideIndex =1;
+    //mặc định hiển thị slide đầu tiên
+    showSlides(slideIndex);
+    function plusSlides(n){
+        showSlides(slideIndex +=n);
+    }
+    function currentSlides(n){
+        showSlides(slideIndex =n);
+    }
+    function showSlides(n){
+        var i;
+        var slides =document.getElementsByClassName("myslides");
+        var dots =document.getElementsByClassName("dot");
+        if(n > slides.length){
+            slideIndex = 1;
+        }
+        //nếu đang ở slide cuối thì chuyển sang slide đầu
+        if(n <1){
+            slideIndex =slides.length;
+        }
+        for(i=0;i<slides.length;i++){
+            slides[i].style.display="none";
+        }
+        for(i=0;i<dots.length;i++){
+            dots[i].className =dots[i].className.replace(" active","");
+        }
+        slides[slideIndex-1].style.display ="block";
+        dots[slideIndex-1].className +=" active"
+    }
+</script>
+</body>
+</html>

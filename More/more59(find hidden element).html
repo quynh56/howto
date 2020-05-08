@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 59</title>
+    <style type="text/css">
+        #myDIV{
+            text-align:Center;
+            background:lightblue;
+            padding:50px;
+            margin-top:20px;
+            display:none;
+            transition:5s;
+        }
+        #myDIV.show{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<p>Click the button to find out if the DIV is hidden. If it is, then display it.</p>
+<button onclick="myFunction()">Try it</button>
+<div id="myDIV">This is my DIV element.</div>
+<p>Some text...</p>
+<script>
+    function myFunction(){
+        var x = document.getElementById("myDIV");
+       /* C1:
+        if(x.className === "show"){
+            x.className = x.className.replace("show", "");
+        }else{
+            x.className += "show";
+        }
+
+        */
+       //C2:
+        if(window.getComputedStyle(x).display === "none"){
+            x.style.display ="block";
+        }else{
+            x.style.display ="none";
+        }
+    }
+</script>
+</body>
+</html>

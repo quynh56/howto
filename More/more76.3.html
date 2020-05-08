@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>76.3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .fa{font-size:28px;}
+    </style>
+</head>
+<body>
+<div id="myDiv" class="fa"></div>
+<script>
+    function brakeChain(){
+        var x =document.getElementById("myDiv");
+        x.innerHTML ="&#xf0c1;";
+        setTimeout(function(){
+            x.innerHTML ="&#xf127;";
+        }, 1000);
+    }
+    brakeChain();
+    setInterval(brakeChain, 2000);
+</script>
+<p>This example demonstrates how to use an icon library to make an animated effect.</p>
+</body>
+</html>

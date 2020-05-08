@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 79</title>
+</head>
+<body>
+<h2>Typewriter</h2>
+<button onclick="myFunction()">Click me</button>
+<p id="demo"></p>
+<script>
+    var txt = 'Lorem ipsum dummy text blabla';
+    var i = 0;
+    var speed =50;
+    function myFunction(){
+       if(i < txt.length){
+           document.getElementById("demo").innerHTML += txt.charAt(i);
+           i++;
+           setTimeout(myFunction, speed);
+       }
+
+    }
+
+</script>
+</body>
+</html>

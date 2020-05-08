@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 90</title>
+</head>
+<body>
+<p>If the viewport is less than, or equal to, 700 pixels wide, the background color will be yellow. If it is greater than 700, it will change to pink.</p>
+<h4>Resize the browser window to see the effect.</h4>
+<script>
+    var x =window.matchMedia("(max-width: 700px)")
+    myFunction(x)
+    x.addListener(myFunction)
+    function myFunction(x){
+        if(x.matches){
+            document.body.style.backgroundColor ="yellow";
+        }else{
+            document.body.style.backgroundColor ="pink";
+        }
+    }
+</script>
+</body>
+</html>

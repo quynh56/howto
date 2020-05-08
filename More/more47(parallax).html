@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 47</title>
+    <style type="text/css">
+        body{
+            height:100%;
+        }
+        .parallax{
+            background-image: url("img/img01.jpg");
+            height:1000px;
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+            background-position:center;
+        }
+        .text{
+            width:100%;
+            background:red;
+            height:800px;
+            font-size:32px;
+        }
+        @media screen and (max-device-width: 1366px){
+            .parallax{
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+<p>In this example we have turned off parallax scrolling for mobile devices. It works as expected on all desktop screens sizes.</p>
+<p>Scroll Up and Down this page to see the parallax scrolling effect.</p>
+<div class="parallax"></div>
+<div class="text">This div is just here to enable scrolling. Tip: Try to remove the background-attachment property to remove the scrolling effect.</div>
+<div class="parallax"></div>
+</body>
+</html>

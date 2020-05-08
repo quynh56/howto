@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images 18</title>
+    <style type="text/css">
+        .container{
+            position:relative;
+            width:100%;
+        }
+        img{
+            width:100%;
+            vertical-align:Center;
+            height:auto;
+        }
+        .form{
+            position:absolute;
+            right:20px;
+            top:20px;
+            bottom:20px;
+            background:white;
+            padding:15px;
+            display:block;
+        }
+        .form h1{
+            font-size:40px
+        }
+        .form label{
+            font-size:20px;
+            font-weight:bold;
+        }
+        .form input[type="email"], input[type="password"]{
+            border:none;
+            color:black;
+            padding:16px;
+             font-size:14px;
+            background:#f1f1f1;
+        }
+        .form input[type="email"]:focus, input[type="password"]:focus{
+            background:#ddd;
+            outline:none;
+        }
+        .btn{
+            border:none;
+            width:100%;
+            text-align:center;
+            color:white;
+            background:#4CAF50;
+            padding:16px 0;
+            opacity:0.8;
+        }
+        .btn{
+            opacity:1;
+        }
+    </style>
+</head>
+<body>
+<h1>Form on Hero Image</h1>
+<div class="container">
+    <img src="img/img01.jpg" alt="">
+    <div class="form">
+        <form action="">
+            <h1>Login</h1>
+            <label>Email</label> <br> <br>
+            <input type="email" name="email" placeholder="Enter Email" required> <br> <br>
+            <label>Password</label><br> <br>
+            <input type="password" name="psw" placeholder="Enter Password" required> <br> <br>
+            <input type="button" name="login" value="Login" class="btn">
+        </form>
+    </div>
+</div>
+<p>This example creates a form on a responsive image. Try
+    to resize the browser window to see how it always will cover the whole width of the screen, and that it scales nicely on all screen sizes.</p>
+</body>
+</html>

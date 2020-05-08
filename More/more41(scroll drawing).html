@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 41</title>
+    <style type="text/css">
+        body{
+            height:2000px;
+            background:#f1f1f1;
+        }
+        #mySVG{
+            position:fixed;
+            width:400px;
+            top:15%;
+            min-height:210px;
+        }
+    </style>
+</head>
+<body>
+<h2>Scroll down this window to draw a triangle.</h2>
+<p>Scroll back up to reverse the drawing.</p>
+<svg id="mySVG">
+    <path fill="none" stroke="red" stroke-width="3" id="triangle"
+          d="M150 0 L75 200 L225 200 Z"></path>
+</svg>
+<script>
+//lấy id của phần tử <path> và độ dài của <path>
+    var triangle =document.getElementById("triangle");
+    //SVGPathElement.getTotalLength():phương thức trả về giá trị tính toán tác nhân người cho tổng chiều dài của con đường trong các đơn vị sử dụng
+    var length =triangle.getTotalLength();
+    //vị trí bắt đầu của bản vẽ
+    triangle.style.strokeDasharray = length;
+    //Ẩn tam giác bằng cacsg bù đắp dấu gạch ngang. Xóa dòng này để hiển thị hình tam giác trc khi cuộn vẽ
+    triangle.style.strokeDashoffset =length;
+    //tìm tỉ lệ phần trăm cuộn khi cuộn (sử dụng các thuộc tính trình duyệt chéo) và bù đắp phần trăm dấu gạch ngang với phânf trăm cuộn
+    window.addEventListener("scroll",myFunction);
+    function myFunction(){
+        var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight);
+        var draw = length*scrollpercent;
+        //đảo ngược bản vẽ (khi cuộn lên)
+        triangle.style.strokeDashoffset = length - draw;
+    }
+</script>
+</body>
+</html>

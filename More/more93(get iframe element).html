@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 93</title>
+</head>
+<body>
+<iframe src="https://www.w3schools.com/default.asp" id="myFrame" frameborder="0" style="width:100%;height:400px"></iframe>
+<p>Click the "Tryit" button to hide the first H1 element in the iframe (another document).</p>
+<button onclick="myFunction()">Try it</button>
+<script>
+    function myFunction(){
+        var frame =document.getElementById("myFrame");
+        var h1 = frame.contentWindow.getElementsByTagName("H1")[0];
+        h1.style.display ="none";
+    }
+</script>
+</body>
+</html>

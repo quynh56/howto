@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images 15</title>
+    <style type="text/css">
+        .container{
+            position:relative;
+            width:100%;
+        }
+        img {
+            width: 100%;
+            overflow: hidden;
+            display: block;
+        }
+        .container div{
+            font-size:20px;
+            color:white;
+        }
+        .top-left{
+            position:absolute;
+            left:16px;
+            top:8px;
+        }
+        .top-right{
+            position:absolute;
+            right:16px;
+            top:8px;
+        }
+        .bottom-right{
+            position:absolute;
+            bottom:8px;
+            right:16px;
+        }
+        .bottom-left{
+            position:absolute;
+            bottom:8px;
+            left:16px;
+        }
+        .center{
+            position:absolute;
+            top:50%;
+            left:50%;
+        }
+    </style>
+</head>
+<body>
+<h2>Image Text</h2>
+<p>How to place text over an image</p>
+<div class="container">
+    <img src="img/img01.jpg" alt="">
+    <div class="top-left">Top Left</div>
+    <div class="top-right">Top Right</div>
+    <div class="bottom-right">Bottom Right</div>
+    <div class="bottom-left">Bottom Left</div>
+    <div class="center">Centered</div>
+</div>
+</body>
+</html>

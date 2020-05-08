@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 01</title>
+    <style type="text/css">
+        body{
+            font-family:Arial
+        }
+        *{
+            box-sizing:border-box
+        }
+        #myVideo{
+            position:fixed;
+            right:0;
+            bottom:0;
+            min-width:100%;
+            min-height:100%;
+        }
+        .content{
+            position:fixed;
+            color:white;
+            bottom:0;
+            left:0;
+            padding:50px 20px;
+            background:rgb(0,0,0);
+            background:rgba(0,0,0,0.4);
+            font-size:20px;
+        }
+        .content h2{
+            font-size:40px;
+        }
+        #mybtn{
+            width:200px;
+            text-align:center;
+            padding:14px;
+            color:white;
+            background:black;
+            font-size:20px;
+            border:none;
+            outline:none;
+        }
+        #mybtn:hover{
+            color:black;
+            background:#ddd;
+        }
+    </style>
+</head>
+<body>
+<video loop autoplay muted id="myVideo">
+    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    Your browser does not support HTML5 video
+</video>
+<div class="content">
+    <h2>Heading</h2>
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis
+        neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae,
+        ad mutat oblique delicatissimi pro.</p>
+    <button onclick="myFunction()" id="mybtn">Pause</button>
+</div>
+<script>
+    function myFunction(){
+        var myVideo =document.getElementById("myVideo");
+        var text = document.getElementById("mybtn");
+        if(myVideo.paused){
+            myVideo.play();
+            text.innerHTML ="Pause";
+        }else{
+            myVideo.pause();
+            text.innerHTML ="Play";
+        }
+    }
+</script>
+</body>
+</html>

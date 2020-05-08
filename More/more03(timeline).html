@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 03</title>
+    <style type="text/css">
+        body{
+            background:#474e5d;
+            font-family:Arial;
+        }
+        *{box-sizing:border-box}
+        .timeline{
+            max-width:1200px;
+            position:relative;
+            margin:0 auto;
+        }
+        .timeline::after{
+            content:"";
+            position:absolute;
+            width:6px;
+            left:50%;
+            top:0;
+            bottom:0;
+            background:white;
+            margin-left:-3px;
+
+        }
+        .container{
+            background:inherit;
+            position:relative;
+            width:50%;
+            padding:10px 40px;
+        }
+        .container::after{
+            content:"";
+            position:absolute;
+            width:25px;
+            height:25px;
+            border-radius:50%;
+            border:4px solid #FF9F55;
+            background:white;
+            right:-17px;
+            top:15px;
+        }
+        .left{
+            left:0;
+        }
+        .right{
+            left:50%;
+        }
+        .left::before{
+            content:"";
+            position:absolute;
+            border:medium solid white;
+            border-width:10px 0 10px 10px;
+            border-color:transparent white;
+            top:22px;
+            right:30px;
+        }
+        .right::before{
+            content:"";
+            position:absolute;
+            border:medium solid white;
+            border-width:10px 10px 10px 0;
+            border-color: transparent white;
+            top:22px;
+            left:30px;
+        }
+        .right::after{ left:-17px;}
+        .content{
+            position:relative;
+            border-radius:6px;
+            background:white;
+            padding:20px 30px;
+        }
+        @media screen and (max-width:800px){
+          /*  .left{left:50%}
+            .container::after{
+                left:-17px;
+            }
+            .left::before{
+                border-width:10px 10px 10px 0;
+                border-color:transparent white transparent transparent;
+                left:30px;
+                right:100%;
+            }
+
+           */
+            .timeline::after{left:31px;}
+            .container{
+                width:100%;
+                padding-left:70px;
+                padding-right:25px;
+            }
+            .container::before{
+                left:60px;
+                border:medium solid white;
+                border-width:10px 10px 10px 0;
+                border-color:transparent white transparent transparent;
+            }
+            .right{left:0%;}
+            .left::before{
+                right:100%;
+                left:60px;
+            }
+            .left::after, .right::after{
+                left:15px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div class="timeline">
+    <div class="container left">
+        <div class="content">
+            <h2>2017</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim
+                fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>2016</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim
+                fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h2>2015</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim
+                fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>2012</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim
+                fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h2>2011</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim
+                fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>2007</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim
+                fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

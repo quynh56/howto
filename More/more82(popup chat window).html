@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 82</title>
+    <style type="text/css">
+
+        #popChat{
+            position:fixed;
+            bottom:2px;
+            right:25px;
+            border:2px solid #ccc;
+            width:300px;
+            padding:20px 10px;
+            display:none;
+        }
+        .btn-open{
+            position:fixed;
+            bottom:29px;
+            right:37px;
+            border:none;
+            text-align:center;
+            color:white;
+            cursor:pointer;
+            background:#555;
+            opacity:0.7;
+            width:300px;
+            padding:16px 20px;
+        }
+        .btn-open:hover , .btn:hover{opacity:1;}
+
+        label{font-size:17px;}
+        textarea{
+            border:none;
+            background: #f1f1f1;
+            width:100%;
+            height: 250px;
+            padding:10px ;
+            margin:5px 0 10px 0;
+            resize:none;
+            box-sizing:border-box;
+        }
+        textarea:focus{
+            outline: none;
+            background:#ddd;
+        }
+        .btn{
+            width:100%;
+            padding:16px 20px;
+            color:white;
+            border:none;
+            background:#4caf50;
+            opacity:0.8;
+            margin:5px 0;
+            cursor:pointer;
+        }
+        .close{background:red;}
+    </style>
+</head>
+<body>
+<h2>Popup Chat Window</h2>
+<p>Click on the button at the bottom of this page to open the chat form.</p>
+<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+<button onclick="openChat()" class="btn-open">Chat</button>
+<div id="popChat">
+    <form action="">
+        <h1>Chat</h1>
+        <label><b>Message</b></label>
+        <textarea name="message" placeholder="Type message.." cols="30" rows="10" required></textarea>
+        <input type="submit" class="btn" value="Send">
+        <input type="button" class="btn close" value="Close" onclick="closeChat()">
+    </form>
+</div>
+<script>
+    var x =document.getElementById("popChat");
+    function openChat(){
+        x.style.display = "block";
+    }
+    function closeChat(){
+        x.style.display ="none";
+    }
+</script>
+</body>
+</html>

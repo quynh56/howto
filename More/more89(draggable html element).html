@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 89</title>
+    <style type="text/css">
+        #myDiv{
+            position:absolute;
+            border:1px solid #ccc;
+            text-align:Center;
+            background:#f1f1f1;
+        }
+        #myDivheader{
+            color:white;
+            background:#2196F3;
+            padding:12px;
+            cursor:move;
+        }
+    </style>
+</head>
+<body>
+<h1>Draggable DIV Element</h1>
+<p>Click and hold the mouse button down while moving the DIV element</p>
+<div id="myDiv">
+    <div id="myDivheader">Click here to move</div>
+    <p>Move</p>
+    <p>this</p>
+    <p>DIV</p>
+</div>
+<script>
+    //tạo phần tử DIV drag
+    dragElement(document.getElementById("myDiv"));
+    function dragElement(elmnt){
+        var pos1 = 0, pos2 =0, pos3 =0, pos4 =0;
+        if(document.getElementById(elmnt.id + "header")){
+            //nếu có, tiêu dề là nơi bạn di chuyển DIV từ
+            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        }else{
+            //nếu không, di chuyển DIV tử bất kì đâu trong DIV
+            elmnt.onmousedown =dragMouseDown;
+        }
+        function dragMouseDown(e){
+            e = e || window.event;
+            e.preventDefault();
+            //lấy con trỏ chuột khi bắt đầu
+            pos3 =e.clientX;
+            pos4 =e.clientY;
+            document.onmouseup =closeDragElement;
+            // gọi 1 hàm bất kì khi con trỏ di chuyển
+            document.onmousemove =elementDrag;
+        }
+        function elementDrag(e){
+            e = e || window.event;
+            e.preventDefault();
+            //tính toán vị trí con trỏ mới
+            pos1=  pos3 -e.clientX;
+            pos2 = pos4 -e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            //đặt vị trí mới của phần tử
+            elmnt.style.top = (elmnt.offsetTop - pos2) +"px";
+            elmnt.style.left =(elmnt.offsetLeft -pos1) +"px";
+        }
+        function closeDragElement(){
+            //dừng di chuyển khi thả nút chuột
+            document.onmouseup =null;
+            document.onmousemove =null;
+        }
+    }
+</script>
+</body>
+</html>

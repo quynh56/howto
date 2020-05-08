@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid 09</title>
+    <style type="text/css">
+        body{
+            padding:10px;
+            background:#f1f1f1;
+        }
+        *{box-sizing:border-box}
+        .header{
+            background:white;
+            padding:60px;
+            font-size:40px;
+            text-align:center;
+        }
+        .row{
+
+        }
+        .columnleft{
+            width:70%;
+            padding-right:20px;
+            float:left;
+        }
+        .columnright{
+            width:30%;
+            float:left;
+        }
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+        }
+        .fakeimg{
+            background:#bbb;
+            padding:20px;
+            margin-bottom:15px;
+            width:100%;
+        }
+        .footer{
+            width:100%;
+            padding:20px;
+            background:#ddd;
+            text-align:center;
+            margin-top:20px;
+        }
+        .row::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        @media screen and (max-width:800px){
+            .columnright,.columnleft{
+                width:100%;
+                padding:0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Blog Name</h1>
+</div>
+<div class="row">
+    <div class="columnleft">
+        <div class="card">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2017 </h5>
+            <div class="fakeimg" style="height:200px">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2017 </h5>
+            <div class="fakeimg" style="height:200px">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+    </div>
+    <div class="columnright">
+        <div class="card">
+            <h2>About Me</h2>
+            <div class="fakeimg" style="height:100px">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+        <div class="card">
+            <h3>Popular Post</h3>
+            <div class="fakeimg" >Image</div>
+            <div class="fakeimg">Image</div>
+            <div class="fakeimg">Image</div>
+        </div>
+        <div class="card">
+            <h3>Follow Me</h3>
+            <p>Some text</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <h2>Footer</h2>
+</div>
+</body>
+</html>

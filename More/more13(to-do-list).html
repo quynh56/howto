@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 13</title>
+    <style type="text/css">
+        body{font-family:Arial;}
+        *{box-sizing:border-box}
+        .header{
+            background:#f44336;
+            padding:30px 50px;
+            width:100%;
+            overflow:hidden;
+        }
+        .header h2{
+            color:white;
+            text-align:center;
+        }
+        .header input{
+            padding: 16px;
+            font-size:16px;
+            width:75%;
+            border:none;
+            float:left;
+        }
+        .header .btn{
+            float:left;
+            padding:16px;
+            background:#d9d9d9;
+            color: #555;
+            width:25%;
+            text-align:center;
+        }
+        .btn:hover{background:#bbb;}
+        ul{
+            width:100%;
+            margin:0;
+            padding:0;
+        }
+        li{
+            position:relative;
+            transition:0.2s;
+            width:100%;
+            list-style:none;
+            font-size:17px;
+            padding:12px  20px 12px 50px;
+            background: #eee;
+        }
+        ul li:nth-child(odd){
+            background:#f9f9f9;
+        }
+        ul:after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        ul li:hover{
+            background:#ddd;
+        }
+        ul li.checked{
+            background:#777777;
+            color:white;
+            text-decoration:line-through;
+        }
+        ul li.checked::before{
+            content:"";
+            position:absolute;
+            left:15px;
+            width:7px;
+            height:15px;
+            border-style:solid;
+            border-width:0 3px 3px 0;
+            border-color:#fff;
+            transform:rotate(45deg);
+        }
+        ul .right{
+            position:absolute;
+            cursor:pointer;
+            padding:12px 16px;
+            top:0;
+            right:0;
+
+
+        }
+        ul .right:hover{
+            color:white;
+            background:#f44336;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h2>My To Do List</h2>
+    <input type="text" placeholder="Title..." id="myInput">
+    <span class="btn" onclick="newElem();">Add</span>
+</div>
+<ul id="myUL">
+    <li>Hit the gym</li>
+    <li class="checked">Pay bills</li>
+    <li>Meet George</li>
+    <li>Buy eggs</li>
+    <li>Read a book</li>
+    <li>Organize office</li>
+</ul>
+<script>
+    var li = document.getElementsByTagName("LI");
+    var i;
+    for(i = 0; i < li.length; i++){
+       var span = document.createElement("SPAN");
+       var txt =document.createTextNode("\u00D7");
+        span.className = "right";
+        span.appendChild(txt);
+        li[i].appendChild(span);
+    }
+    var close = document.getElementsByClassName("right");
+    var i;
+    for(i =0; i < close.length ; i++){
+        close[i].addEventListener("click",function () {
+            this.parentElement.style.display ="none";
+        });
+    }
+   //thêm biểu tượng "checked" khi nhấp vào mục danh sách
+   var list = document.querySelector('ul');
+    list.addEventListener("click",function(ev){
+       if(ev.target.tagName === "LI"){
+           ev.target.classList.toggle("checked");
+       }
+    });
+    function newElem(){
+        var li,i,inputValue,t,span,txt;
+        inputValue =document.getElementById("myInput").value;
+        li=document.createElement("li");
+        t =document.createTextNode(inputValue);
+        li.appendChild(t);
+        if(inputValue == ""){
+            alert("You must write something!");
+        }else{
+            document.getElementById("myUL").appendChild(li);
+        }
+        document.getElementById("myInput").value ="";
+        span =document.createElement("SPAN");
+        txt =document.createTextNode("\u00d7");
+        span.className = "right";
+        span.appendChild(txt);
+        li.appendChild(span);
+        //var close =document.getElementsByClassName("right");
+        for(i =0 ; i < close.length; i++){
+            close[i].addEventListener("click",function(){
+                this.parentElement.style.display ="none";
+            });
+        }
+    }
+</script>
+</body>
+</html>

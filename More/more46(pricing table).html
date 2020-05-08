@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 46</title>
+    <style type="text/css">
+        body{font-family:Arial}
+        *{box-sizing:border-box}
+        .column{
+            width:33.3%;
+            float:left;
+            padding:8px;
+        }
+        .price{
+            text-align:Center;
+            list-style:none;
+            padding:0;
+            margin:0;
+        }
+        .price li{
+            padding:20px 16px;
+            border:1px solid #f1f1f1;
+            margin-top:-1px;
+            font-size:25px;
+        }
+        .price .header{
+            background:black;
+            color:white;
+        }
+        .grey{
+            background: #f1f1f1;
+        }
+        .footer{
+            background: #f1f1f1;
+        }
+        .footer a{
+            text-decoration:none;
+            color:white;
+            background:#4caf50;
+            padding:10px 25px;
+        }
+        .column .price:hover{
+            box-shadow:0 8px 12px 0 rgba(0,0,0,0.2);
+        }
+        @media screen and (max-width:700px){
+            .column{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div style="text-align:Center">
+    <h2>Responsive Pricing Tables</h2>
+    <p>Resize the browers window to see effect.</p>
+</div>
+<div class="column">
+    <ul class="price">
+        <li class="header">Basic</li>
+        <li class="grey">$9.99 / year</li>
+        <li>10GB Storage</li>
+        <li>10 Emails</li>
+        <li>10 Domains</li>
+        <li>1GB Bandwidth</li>
+        <li class="footer"><a href="#">Sign Up</a></li>
+    </ul>
+</div>
+<div class="column">
+    <ul class="price">
+        <li class="header" style="background:#4caf50">Pro</li>
+        <li class="grey">$24.99 / year</li>
+        <li>25GB Storage</li>
+        <li>25 Emails</li>
+        <li>25 Domains</li>
+        <li>2GB Bandwidth</li>
+        <li class="footer"><a href="#">Sign Up</a></li>
+    </ul>
+</div>
+<div class="column">
+    <ul class="price">
+        <li class="header">Premium</li>
+        <li class="grey">$49.99 / year</li>
+        <li>50GB Storage</li>
+        <li>50 Emails</li>
+        <li>50 Domains</li>
+        <li>5GB Bandwidth</li>
+        <li class="footer"><a href="#">Sign Up</a></li>
+    </ul>
+</div>
+</body>
+</html>

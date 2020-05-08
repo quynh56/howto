@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid 07</title>
+    <style type="text/css">
+        *{box-sizing:border-box}
+        .row{margin:0 -5px;}
+        .row::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        .column{
+            float:left;
+            padding:0 10px;
+            width:25%;
+        }
+        .card{
+            background:#f1f1f1;
+            box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+            text-align:center;
+            padding:20px;
+        }
+        @media screen and (max-width:600px){
+            .column{
+                width:100%;
+                margin-bottom:20px;
+                display:block;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>Responsive Column Cards</h2>
+<p>Resize the browser window to see the effect</p>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <h3>Card 4</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

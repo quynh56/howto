@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 45</title>
+    <style type="text/css">
+        body{
+            margin:0;
+            font-family:Arial;
+
+        }
+        #header{
+            font-size:90px;
+            text-align:Center;
+            background:#f1f1f1;
+            width:100%;
+            position:fixed;
+            font-weight:bold;
+            padding:16px;
+            top:0;
+            transition:0.2s;
+        }
+        #content{
+            font-size:30px;
+            height:2000px;
+            margin-top:150px;
+            padding:20px 20px 2500px 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="header">Header</div>
+<div id="content">
+    <p><b>This example demonstrates how to shrink a header when the user starts to scroll the page.</b></p>
+    <p>Scroll down this frame to see the effect!</p>
+    <p>Scroll to the top to remove the effect.</p>
+    <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<script>
+    window.onscroll =function(){myFunction()};
+    var header =document.getElementById("header");
+    function myFunction(){
+        if(document.body.scrollTop >50 || document.documentElement.scrollTop >50){
+            header.style.fontSize ="30px";
+        }else{
+            header.style.fontSize ="100px";
+        }
+    }
+</script>
+</body>
+</html>

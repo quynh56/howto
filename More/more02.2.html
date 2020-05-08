@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 02.2</title>
+    <style type="text/css">
+        .modal{
+            position:fixed;
+            top:0;
+            left:0;
+            background:rgb(0,0,0);
+            background:rgba(0,0,0,0.4);
+            width:100%;
+            height:100%;
+            display:none;
+            overflow: auto;
+            -webkit-animation-name: fadeIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name:fadeIn;
+            animation-duration:0.4s;
+        }
+        .modal-content{
+            position:fixed;
+            bottom:0;
+            width:100%;
+            background:white;
+            -webkit-animation-name:slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name:slideIn;
+            animation-duration:0.4s;
+        }
+        .modal-header{
+            background:#5cb85c;
+            color:white;
+            padding:2px 16px;
+        }
+        .close{
+            float:right;
+            font-weight:bold;
+            font-size:30px;
+            cursor:pointer;
+        }
+        .modal-body{padding:2px 16px;}
+        .modal-footer{
+            padding:2px 16px;
+            color:white;
+            background:#5cb85c;
+        }
+        .close:hover, .close:focus{color:black}
+        @-webkit-keyframes slideIn {
+            from{
+                bottom:-300px;
+                opacity:0;
+            }
+            to{
+                bottom:0px;
+                opacity:1;
+            }
+        }
+        @keyframes slideIn {
+            from{
+                bottom:-300px;
+                opacity:0;
+            }
+            to{
+                bottom:0px;
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes fadeIn {
+            from{opacity:0}
+            to{opacity:1}
+        }
+        @keyframes fadeIn {
+            from{opacity:0}
+            to{opacity:1}
+        }
+
+    </style>
+</head>
+<body>
+ <h2>Bottom Modal</h2>
+<button onclick="openModal()">Open Modal</button>
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" onclick="closeModal();">&times;</span>
+            <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+            <p>Some text in the Modal Body</p>
+            <p>Some other text..</p>
+        </div>
+        <div class="modal-footer">
+            <h3>Modal Footer</h3>
+        </div>
+    </div>
+</div>
+ <script>
+     var myModal =document.getElementById("myModal");
+     function openModal(){
+         myModal.style.display ="block";
+     }
+     function closeModal(){
+         myModal.style.display ="none";
+     }
+     window.onclick = function(even){
+         if(even.target == myModal){
+             myModal.style.display ="none";
+         }
+     }
+ </script>
+</body>
+</html>

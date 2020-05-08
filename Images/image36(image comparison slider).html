@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images 36</title>
+    <style type="text/css">
+        .img-comp-container{
+            position:relative;
+            height:200px;
+        }
+        .img-comp-img{
+            position:absolute;
+            width:auto;
+            height:auto;
+            overflow:hidden;
+        }
+        .img-comp-img img{
+            display:block;
+            vertical-align:middle;
+        }
+        .img-comp-slider{
+            position:absolute;
+            z-index:9;
+            cursor:ew-resize;
+            width:40px;
+            height:40px;
+            background: #2196f3;
+            opacity:0.7;
+            border-radius:50%;
+        }
+    </style>
+    <script>
+        function initComparisons(){
+            var x,i;
+            // tìm tất cả các thành phần có class ="overlay"
+            x= document.getElementsByClassName("img-comp-overlay");
+            for(i=0; i<x.length;i++){
+                /*
+                - một lần cho phần tử "overlay"
+                - vượt qua phần tử "overlay" làm tham số khi thực hiện chức năng so sánh:
+                 */
+                compareImages(x[i]);
+            }
+            function compareImages(img){
+                var slider, img, clicked = 0 , w,h;
+                //lấy chiều rộng và chiều dài của phần tử img;
+                w = img.offsetWidth;
+                h = img.offsetHeight;
+                //đặt chiều rộng của phần tử img=50%;
+                img.style.width = (w / 2) + "px";
+                //tạo slider(thanh trượt)
+                slider =document.createElement("DIV");
+                slider.setAttribute("class","img-comp-slider");
+                //chèn thành trượt
+                img.parentElement.insertBefore(slider, img);
+                //định vị slider ở giữa
+                slider.style.top = (h /2) - (slider.offsetHeight / 2) +"px";
+                slider.style.left = (w / 2 ) -(slider.offsetWidth /2 )+"px";
+                //thực thi chức năng khi nhấn vào nút chuột mouse
+                slider.addEventListener("mousedown",slideReady);
+                //và một chức năng khác khi chuột được phát  hành
+                window.addEventListener("mouseup",slideFinish);
+                //hoặc chạm(đối với màn hình cảm ứng)
+                slider.addEventListener("touchstart",slideReady);
+                //hoặc phát hành(đối với màn hình cảm ứng)
+                window.addEventListener("touchstop",slideFinish);
+                function slideReady(e){
+                    //ngăn chặn mọi hoạt động khác có thể xáy ra khi di chuyển qua hình ảnh
+                    e.preventDefault();
+                    //thanh trượt hiện được nhấp và sẵn sàng di chuyển
+                    clicked =1;
+                    //thực thi 1  chức năng khi thanh trượt được di chuyển
+                    window.addEventListener("mousemove",slideMove);
+                    window.addEventListener("touchmove",slideMove);
+                }
+                function slideFinish(){
+                    clicked =0;
+                }
+                function slideMove(e){
+                    var pos;
+                    //nếu thanh trượt không còn được nhấp , thoát khỏi chức năng này
+                    if(clicked == 0) return false;
+                    //lấy vị trí x của con trỏ;
+                    pos = getCursorPos(e);
+                    //ngăn thanh trượt khỏi vị trí bên ngoài
+                    if(pos < 0) pos = 0;
+                    if(pos > w) pos = w ;
+                    //thực thi 2 chức năng sẽ thay đổi kích thước hình ảnh lớp phủ theo con trỏ
+                    slide(pos);
+                }
+                function getCursorPos(e){
+                    var a , x =0;
+                    e = e || window.event;
+                    //lấy vị trí x của hình ảnh
+                   a = img.getBoundingClientRect();
+                   //tính tọa độ x của con trỏ ,liên qua đến hình ành
+                    x =e.pageX - a.left;
+                    //xem xét bất kì cuộn trang nào
+                    x = x - window.pageXOffset;
+                    return x;
+                }
+                function slide(x){
+                    //thay đổi kích thước hình ảnh;
+                    img.style.width = x + "px";
+                    //dịnh vị thanh trượt
+                    slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) +"px";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Compare Two Images</h1>
+<p>Click add slide the blue slider to compare two images:</p>
+<div class="img-comp-container">
+    <div class="img-comp-img">
+        <img src="img/img01.jpg" width="300px" height="200px" alt="">
+    </div>
+    <div class="img-comp-img img-comp-overlay">
+        <img src="img/img02.jpg" width="300px" height="200px" alt="">
+    </div>
+</div>
+<script>
+    initComparisons();
+</script>
+</body>
+</html>

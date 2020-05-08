@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 14.3</title>
+    <style type="text/css">
+        #loader{
+            position:absolute;
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            -webkit-animation: fade 2s linear infinite;
+            animation:fade 2s linear infinite;
+            border:16px solid #f3f3f3;
+            border-top:16px solid dodgerblue;
+            top:50%;
+            left:50%;
+        }
+        @-webkit-keyframes fade {
+            0%{
+                -webkit-transform: rotate(0deg);
+                transform:rotate(0deg);
+            }
+            100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+            }
+        }
+        #myDiv{
+            position:relative;
+            display:none;
+            -webkit-animation-name:namimation-bottom;
+            -webkit-animation-duration:1s;
+            animation-name:animation-bottom;
+            animation-duration:1s;
+            text-align:Center;
+        }
+        @-webkit-keyframes animation-bottom {
+            from{
+                opacity:0;
+                bottom:-100px;
+            }
+            to{
+                opacity:1;
+                bottom:0;
+            }
+        }
+        @keyframes animation-bottom {
+            from{
+                opacity:0;
+                bottom:-100px;
+            }
+            to{
+                opacity:1;
+                bottom:0;
+            }
+        }
+    </style>
+</head>
+<body onload="myFunction()">
+<div id="loader"></div>
+<div id="myDiv">
+    <h3>Tada!</h3>
+    <p>Some text in my newly loader page..</p>
+</div>
+<script>
+    var myVar;
+    function myFunction(){
+        myVar =setTimeout(frame,3000);
+        function frame(){
+            var loader =document.getElementById("loader");
+            var div =document.getElementById("myDiv");
+            loader.style.display = "none";
+            div.style.display ="block";
+        }
+    }
+</script>
+</body>
+</html>

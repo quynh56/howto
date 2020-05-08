@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 42</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+        #section1, .main{
+            background:pink;
+            height:600px;
+            width:100%;
+            margin-bottom:20px;
+        }
+        #section2{
+            background:yellow;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            //thêm smooth scroll (cuộn trơn tru) vào tất cả các liên kết
+            $("a").on("click", function(event){
+                //đảm bảo this.hash có giá trị trước khi ghi đè hành vi mặc định
+                if(this.hash != ""){
+                    //ngăn chặn hành vi nhấp chuột mặc định
+                    event.preventDefault();
+                    //lưu trữ hash
+                    var hash =this.hash;
+                    //sử dụng phương thức animate() trong jquery để thêm smooth scroll
+                    //số tùy chọn(800) chỉ định số mili giâu cần thiết để cuộn đến khi vực được chỉ định
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        //thêm hàm băm (#) vào URL khi cuộn xong (hành vi nhấp mặc định)
+                        window.location.hash =hash;
+                    });
+                }//kết thúc nếu
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>Smooth Scroll</h1>
+<div id="section1" class="main">
+    <h2>Section 1</h2>
+    <p>Click on the link to see the "smooth" scrolling effect.</p>
+    <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+    <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
+</div>
+<div class="main" id="section2">
+    <h2>Section 2</h2>
+    <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
+</div>
+</body>
+</html>

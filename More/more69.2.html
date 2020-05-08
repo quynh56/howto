@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 69.2</title>
+    <style type="text/css">
+        body{font-family:Arial;}
+        *{box-sizing:border-box}
+        .container{
+            border:2px solid #f1f1f1;
+            width:100%;
+            border-radius: 5px 5px 0 0;
+        }
+        .row{
+            padding:10px;
+            background:#f1f1f1;
+            border-radius: 5px 5px 0 0;
+            width:100%;
+        }
+        .column-left, .column-right{
+            width:20%;
+        }
+        .column-middle{
+            width:60%;
+        }
+        .column-left,.column-middle,.column-right{
+            float:left;
+        }
+        .dots{
+            margin-top:5px;
+            width:12px;
+            height:12px;
+            border-radius:50%;
+            text-align:center;
+            display:inline-block;
+        }
+        .search{
+            width:100%;
+            border:none;
+            padding:5px;
+            border-radius:3px;
+        }
+        .bar{
+            background:#bbb;
+            width:25px;
+            height:3px;
+            display:block;
+            margin:3px;
+        }
+        .content{padding:20px 15px;}
+        .row::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="column-left">
+            <span class="dots" style="background:red"></span>
+            <span class="dots" style="background:yellow"></span>
+            <span class="dots" style="background:#4caf50"></span>
+        </div>
+        <div class="column-middle">
+            <input type="text" class="search" value="http://www.w3schools.com" >
+        </div>
+        <div class="column-right">
+           <div style="float:right">
+               <span class="bar"></span>
+               <span class="bar"></span>
+               <span class="bar"></span>
+           </div>
+        </div>
+    </div>
+    <div class="content">
+        <h3>Browser Window</h3>
+        <p>How to create a browser window look with CSS</p>
+    </div>
+</div>
+</body>
+</html>

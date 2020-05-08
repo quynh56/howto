@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 81</title>
+    <style type="text/css">
+        *{box-sizing:border-box}
+        .message{
+            border:2px solid #dedede;
+            background: #f1f1f1;
+            border-radius:5px;
+            width:100%;
+            margin:10px 0;
+            overflow:auto;
+            padding:15px;
+        }
+        .message img{
+            width:70px;
+            height:70px;
+            border-radius:50%;
+            float:left;
+            margin-right:20px;
+        }
+        .time-right{
+            float:right;
+            color:#aaa;
+        }
+        .darker{
+            background:#ccc;
+        }
+        .darker .right{float:right;}
+        .time-left{
+            color:#999;
+        }
+        .message::after{
+            content:"";
+            clear:both;
+            display:table;
+        }
+    </style>
+</head>
+<body>
+<h2>Chat Massages</h2>
+<div class="message">
+    <img src="img/img01.jpg" alt="" class="boy">
+    <p>Hello. How are yoy</p>
+    <span class="time-right">11:00</span>
+</div>
+<div class="message darker">
+    <img src="img/img02.jpg" alt="" class="right">
+    <p>Hey! I'm fine. Thanks goe asking!</p>
+    <span class="time-left">11:01</span>
+</div>
+<div class="message">
+    <img src="img/img01.jpg" alt="">
+    <p>Sweet! So, what do you wanna do today?</p>
+    <span class="time-right">11:02</span>
+</div>
+<div class="message darker">
+    <img src="img/img02.jpg" alt="" >
+    <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+    <span class="time-left">11:05</span>
+</div>
+</body>
+</html>

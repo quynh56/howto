@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 38</title>
+    <style type="text/css">
+        .float-right-lg{
+            background:pink;
+        }
+        .float-right-sm{
+            background:yellow;
+        }
+        @media screen and (max-width:768px){
+            .float-right-sm{
+                float:right;
+            }
+        }
+        @media screen and (min-width:679px){
+            .float-right-lg{
+                float:right;
+            }
+        }
+        .clearfix::after{
+            display:block;
+            content:"";
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+<h2>Responsive Floats</h2>
+<p>The float-right-sm class will float right on screens that are equal to or LESS THAN 768px. The float-right-lg will float right on screens that are equal to or GREATER THAN 769px. Note that we also use a clearfix to clear floats.</p>
+<p>Resize the browser window to see the result.</p>
+<div class="clearfix">
+    <span class="float-right-lg">Float right =&lt; 769px</span>
+    <span class="float-right-sm">Float right =&gt; 768px</span>
+</div>
+</body>
+</html>

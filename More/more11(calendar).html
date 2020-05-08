@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 11</title>
+    <style type="text/css">
+        *{box-sizing:border-box}
+        .month{
+
+            background:#1abc9c;
+            padding:40px 17px;
+            width:100%;
+            text-align:center;
+            color:white;
+            font-size:40px;
+        }
+        li{
+            list-style: none;
+        }
+        .month li{
+            font-weight:bold;
+            font-size:25px;
+
+        }
+        .month .prev{
+            float:left;
+            margin-left:-40px;
+        }
+        .month .next{
+            float:right;
+        }
+        .weekdays{
+            padding:10px 0;
+            background:#ddd;
+            margin:0;
+        }
+        .day .active {
+            padding:8px;
+            color:white;
+            background:#1abc9c;
+        }
+        .weekdays li, .day li{
+            display:inline-block;
+            width:13.6%;
+            font-size:18px;
+            text-align:Center;
+            padding:8px;
+            color: #777;
+        }
+        .day{
+            background:#f1f1f1;
+            padding:10px 0;
+            margin:0;
+        }
+
+        @media screen and (max-width:600px){
+            .weekdays li, .day li{
+                width:12.6%;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>CSS Calendar</h1>
+<div class="month">
+    <ul>
+        <li class="prev">&#10094;</li>
+        <li class="next">&#10095;</li>
+    </ul>
+    AUGUST <br>
+    <span>2017</span>
+</div>
+<ul class="weekdays">
+    <li>Mo</li>
+    <li>Tu</li>
+    <li>We</li>
+    <li>Th</li>
+    <li>Fr</li>
+    <li>Sa</li>
+    <li>Su</li>
+</ul>
+<ul class="day">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li><span class="active">10</span></li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li>21</li>
+    <li>22</li>
+    <li>23</li>
+    <li>24</li>
+    <li>25</li>
+    <li>26</li>
+    <li>27</li>
+    <li>28</li>
+    <li>29</li>
+    <li>30</li>
+    <li>31</li>
+</ul>
+</body>
+</html>

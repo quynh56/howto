@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 80</title>
+    <style type="text/css">
+        body,html{
+            margin:0;
+            height:100%;
+        }
+
+        *{box-sizing:border-box}
+        .bg-img{
+            background-image: url("img/img05.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position: center;
+            height:100%;
+            position:relative;
+            color:white;
+            font-size:25px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .top-left{
+            position:absolute;
+            top:0;
+            left:20px;
+        }
+        .bottom-left{
+            position:absolute;
+            bottom:0;
+            left:20px;
+        }
+        .middle{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            text-align:Center;
+        }
+        hr{
+            width:40%;
+            border:1px solid white;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-img">
+    <div class="top-left">
+        <p>Logo</p>
+    </div>
+    <div class="middle">
+        <h1>COMING SOON</h1>
+        <hr>
+        <p id="demo"></p>
+    </div>
+    <div class="bottom-left">
+        <p>Some text</p>
+    </div>
+</div>
+<script>
+    var countdown =new Date("Jan 05, 2021 15:37:25").getTime();
+    var x= setInterval(function(){
+        var now, distance, days, hours, minutes, seconds;
+        now = new Date().getTime();
+        distance = countdown - now;
+        days = Math.floor(distance / (1000*60*60*24));
+        hours = Math.floor((distance%(1000*60*60*24)) / (1000*60*60));
+        minutes = Math.floor((distance % (1000*60*60)) /(1000*60));
+        seconds = Math.floor((distance%(1000*60)) /1000);
+        document.getElementById("demo").innerHTML = days +"d " + hours +"h " +minutes +"m " + seconds + "s";
+        if(distance <0){
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 51</title>
+</head>
+<body>
+<p>Click the button to swap the text of the DIV element:</p>
+<p><button onclick="myFunction()">Click Me</button></p>
+<div id="text">Hello</div>
+<script>
+    function myFunction(){
+        var x =document.getElementById("text");
+        if(x.innerHTML === "Hello"){
+            x.innerHTML = "Swapped text!";
+        }else{
+            x.innerHTML = "Hello";
+        }
+    }
+</script>
+</body>
+</html>

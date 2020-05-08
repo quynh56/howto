@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images 09</title>
+    <style type="text/css">
+        .container{
+            position:relative;
+            width:50%;
+        }
+        img{
+            display:block;
+            width:100%;
+            height:auto;
+        }
+        .middle{
+            position:absolute;
+            width:0;
+            height:100%;
+            right:0;
+            bottom:0;
+            left:100%;
+            transition:0.5s ease;
+        }
+        .container:hover .middle{
+             left:0;
+            width:100%;
+             background:dodgerblue;
+             transition: 0.5s ease;
+         }
+        .text{
+            color:white;
+            font-size:17px;
+            position:absolute;
+            top:50%;
+            left:40%;
+           /* transform:translate(-50%,-50%);
+            -ms-transform:translate(-50%,-50%);
+
+            */
+            white-space:nowrap;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Slide in Overlay from the Right</h1>
+<p>Hover over the image to see the effect</p>
+<div class="container">
+    <img src="img/img02.jpg" alt="">
+    <div class="middle">
+        <div class="text">Hello World</div>
+    </div>
+</div>
+</body>
+</html>

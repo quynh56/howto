@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images 28</title>
+    <style type="text/css">
+        .column{
+            width:25%;
+            float:left;
+            padding:0 8px;
+
+        }
+        .card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+        .container{
+            padding:0 16px;
+            padding-bottom:10px;
+        }
+        .title{
+            color:#ccc;
+            font-size:20px;
+        }
+       .container button{
+           color:white;
+           background:black;
+           width:100%;
+           padding:10px;
+           text-align:Center;
+           font-size:17px;
+           border:none;
+        }
+        .row:after, .container:after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+        button:hover{
+            background:#999999;
+        }
+    </style>
+</head>
+<body>
+<h1>Responsive "Meet The Team" Section</h1>
+<p>Resize the browser window to see the effect</p>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="img/img01.jpg" style="width:100%;height:200px" alt="">
+           <div class="container">
+               <h2>Jane Doe</h2>
+               <p class="title">CEO & Founder</p>
+               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+               <p>example@example.com</p>
+               <button>Contact</button>
+           </div>
+        </div>
+    </div>
+    <div class="column">
+       <div class="card">
+           <img src="img/img02.jpg" alt="" style="width:100%;height:200px">
+          <div class="container">
+              <h2>Mike Ross</h2>
+              <p class="title">Art Director</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <button>Contact</button>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <img src="img/img03.jpg" alt="" style="width:100%;height:200px">
+            <div class="container">
+                <h2>John Doe</h2>
+                <p class="title">Designer</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>example@example.com</p>
+                <button>Contact</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

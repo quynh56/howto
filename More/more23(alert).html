@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 23</title>
+    <style type="text/css">
+        *{box-sizing:border-box}
+        .alert{
+            width:100%;
+            opacity:1;
+            padding:20px;
+            color:White;
+            background:#f44336;
+            margin-bottom:15px;
+            transition: opacity 0.6s;
+        }
+        .success{
+            background:#4caf50;
+        }
+        .info{
+            background:#2196F3;
+        }
+        .warning{
+            background:orange;
+        }
+        .close{
+            float:right;
+            font-weight:bold;
+            font-size:22px;
+            color:white;
+            transition:0.3s;
+            line-height:20px;
+            cursor:pointer;
+        }
+        .close:hover{color:black;}
+    </style>
+</head>
+<body>
+<h2>Alert Messages</h2>
+<p>Click on the "x" symbol to close the alert message.</p>
+<div class="alert">
+    <span class="close">&times;</span>
+   <strong>Danger!</strong> Indicates a dangerous or potentially negative action
+</div>
+<div class="alert success">
+    <span class="close">&times;</span>
+    <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+<div class="alert info">
+    <span class="close">&times;</span>
+    <strong>Info!</strong> Indicates a neutral informative change or action.
+</div>
+<div class="alert warning">
+    <span class="close">&times;</span>
+    <strong>Warning!</strong> Indicates a warning that might need attention.
+</div>
+<script>
+    var x =document.getElementsByClassName("close");
+    var i;
+    for(i = 0; i< x.length; i++){
+        x[i].addEventListener("click",function(){
+            this.parentElement.style.opacity = "0";
+            setTimeout(function(){
+                this.parentElement.style.display="none";
+            }, 600);
+        });
+    }
+</script>
+</body>
+</html>

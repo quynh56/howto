@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mores 85</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        body{font-family:Arial}
+        *{box-sizing:border-box}
+        .row{width:100%;}
+        .row::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        .column{
+            width:25%;
+            float:left;
+            padding:0 5px;
+        }
+        .card{
+            background:#555;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            padding:20px;
+            text-align:Center;
+            color:white;
+        }
+        .fa{
+            font-size:50px;
+            font-weight:bold;
+        }
+        @media screen and (max-width:800px){
+            .column{
+                float:none;
+                display:block;
+                width:100%;
+                margin-bottom:10px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<h2>Responsive Section Counter</h2>
+<p>Resize the browser window to see the effect.</p>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <p><i class="fa fa-user" aria-hidden="true"></i></p>
+            <h3>11+</h3>
+            <p>Partners</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <p><i class="fa fa-check" aria-hidden="true"></i></p>
+            <h3>55+</h3>
+            <p>Projects</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <p><i class="fa fa-smile-o" aria-hidden="true"></i></p>
+            <h3>100+</h3>
+            <p>Happy Clients</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <p><i class="fa fa-coffee" aria-hidden="true"></i></p>
+            <h3>100+</h3>
+            <p>Meetings</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
