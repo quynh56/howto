@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 37</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .navbar{
+            overflow:hidden;
+            background:#333;
+        }
+        .navbar a{
+            text-decoration:none;
+            color:white;
+            padding:16px;
+            float:left;
+            display:block;
+            font-size:17px;
+        }
+        .dropdown{
+            overflow:hidden;
+        }
+        .btn{
+            padding:16px;
+            border:none;
+            color:white;
+            font-size:17px;
+            background:#333;
+        }
+        .drop-content{
+            position:absolute;
+            display:none;
+        }
+        .drop-content a{
+            float:none;
+            display:block;
+            min-width:160px;
+            color:black;
+            background: #f1f1f1;
+        }
+        .navbar a:hover, .dropdown:hover .btn , .btn:focus{
+            background:red;
+        }
+        .drop-content a:hover{background:#ccc;}
+        .show{display:block;}
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">News</a>
+    <div class="dropdown">
+        <button class="btn" onclick="myFunction()">Dropdown <i class="fa fa-caret-down"></i></button>
+        <div class="drop-content" id="myDrop">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <h3>Dropdown Menu inside a Navigation Bar</h3>
+    <p>Click on the "Dropdown" link to see the dropdown menu.</p>
+</div>
+<script>
+    function myFunction(){
+        document.getElementsByClassName("drop-content")[0].classList.toggle("show");
+    }
+    window.onclick =function(){
+        if(!event.target.matches('.btn')){
+            var dropdown =document.getElementsByClassName("drop-content");
+            var i;
+            for(i=0;i<dropdown.length;i++){
+                var openDropdown =dropdown[i];
+                if(openDropdown.classList.contains('show')){
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

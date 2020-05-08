@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 41</title>
+    <style type="text/css">
+        .mobinav{
+            overflow:hidden;
+            background:#333;
+            position:relative;
+            width:100%;
+        }
+        .mobinav a{
+            display:block;
+            color:white;
+            text-decoration:none;
+            font-size:17px;
+            padding:16px;
+        }
+        .mobinav a:hover{
+            color:black;
+            background:#cccccc;
+        }
+        .mobinav .active{
+            background:#4CAF50;
+            color:white;
+        }
+        .mobinav .icon{
+            background:black;
+            color:white;
+            position:absolute;
+            top:0;
+            right:0;
+            font-weight:bold;
+            font-size:15px;
+        }
+        #mylink{display:none;}
+    </style>
+</head>
+<body>
+<div class="mobinav">
+    <a href="#Logo" class="active">Logo</a>
+    <div id="mylink">
+        <a href="#News">News</a>
+        <a href="#Contact">Contact</a>
+        <a href="#About">About</a>
+    </div>
+    <a href="#" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div style="padding-left:16px">
+    <h3>Vertical Mobile Navbar</h3>
+    <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+    <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+</div>
+<script>
+    function myFunction(){
+        var x =document.getElementById("mylink");
+        if(x.style.display ==="block"){
+            x.style.display ="none";
+        }else{
+            x.style.display ="block";
+        }
+    }
+</script>
+</body>
+</html>

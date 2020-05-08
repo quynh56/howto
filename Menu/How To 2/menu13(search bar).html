@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 13</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .topnav{
+            overflow:hidden;
+            float:left;
+            background:#f1f1f1;
+            width:100%;
+        }
+        .topnav a{
+            text-decoration:none;
+            color:black;
+            font-size:17px;
+            padding:14px 16px;
+            float:left;
+            cursor:pointer;
+            text-align:center;
+            display:block;
+        }
+        .topnav a:hover{
+            background:#ccc;
+        }
+        .topnav a.active{
+           color:white;
+            background:dodgerblue;
+        }
+        .topnav .right{
+            float:right;
+            display:block;
+            margin-top:8px;
+            margin-right:10px;
+        }
+        .topnav .right input{
+            padding: 7px 5px ;
+            border:none;
+            float:left;
+            font-size:17px;
+        }
+        .topnav .right button{
+            border:none;
+            padding: 7px 10px;
+            background:#ddd;
+            font-size:17px;
+        }
+        .topnav .right button:hover{
+            background:#ccc;
+        }
+        @media screen and ( max-width: 600px){
+            .topnav a,.topnav .right, .topnav .right input,.topnav .right button {
+                display:block;
+                float:none;
+                text-align:left;
+                width:100%;
+                margin:0;
+            }
+            .topnav input[type=text] {
+                border: 1px solid #ccc;
+                width:95%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <a href="#Home" class="active">Home</a>
+    <a href="#About">About</a>
+    <a href="#Contact">Contact</a>
+    <div class="right">
+        <form action="">
+            <input type="text" name="search" placeholder="Search..">
+            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <h2>Responsive Search Bar</h2>
+    <p>Navigation bar with a search box and a submit button inside of it.</p>
+    <p>Resize the browser window to see the responsive effect.</p>
+</div>
+</body>
+</html>

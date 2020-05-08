@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 36.3</title>
+    <style type="text/css">
+        .btn{
+            position:relative;
+            float:right;
+        }
+        .dropdown{
+            border:none;
+            color:white;
+            font-size:17px;
+            padding:16px;
+            background:#4CAF50;
+        }
+        .top-content{
+            position:absolute;
+            overflow:hidden;
+            background: #f1f1f1;
+            right:0;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index:1;
+            display:none;
+        }
+        .top-content a{
+            text-decoration:none;
+            font-size:17px;
+            display:block;
+            color:black;
+            padding:16px;
+            min-width:160px;
+        }
+        .top-content a:hover{background:#ccc;}
+        .show{display:block;}
+    </style>
+</head>
+<body>
+<h2>Aligned Dropdown Content</h2>
+<p>Use <strong>float: right</strong> on the dropdown class to float the dropdown menu to the right, and <strong>right:0</strong> on the dropdown-content if you want the dropdown content to go from right to left.</p>
+<div class="btn" >
+    <button onclick="myFunction()" class="dropdown">Dropdown</button>
+    <div class="top-content" id="myDrop">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+</div>
+<script>
+    function myFunction(){
+        document.getElementById("myDrop").classList.toggle("show");
+    }
+    window.onclick =function(event){
+        if(!event.target.matches('.dropdown')){
+            var dropdown=document.getElementsByClassName("top-content");
+            var i;
+            for(i=0;i<dropdown.length;i++){
+                var openDropdown =dropdown[i];
+                if(openDropdown.classList.contains('show')){
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

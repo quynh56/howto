@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 17</title>
+    <style type="text/css">
+        .sidenav{
+            width:0;
+            height:100%;
+            position:fixed;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.9);
+            top:0;
+            left:0;
+            overflow-x:hidden;
+            transition:0.5s;
+        }
+        .sidenav .right{
+            position:absolute;
+            right:45px;
+            top:20px;
+            font-size:36px;
+            text-decoration:none;
+            color:#818181;
+            font-weight:bold;
+        }
+        .sidenav .overlay-content{
+            text-align:center;
+            position:relative;
+            top:230px;
+
+        }
+        .sidenav .overlay-content a{
+            display:block;
+            text-decoration:none;
+            font-size:40px;
+            color:#818181;
+            padding:16px 14px;
+        }
+        .sidenav a:hover{
+            color:white;
+        }
+        .main{
+            font-size:20px;
+            padding: 16px 14px;
+        }
+        .main span{
+            font-size: 36px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="sidenav">
+    <a href="#" class="right" onclick="closeNav()">&times;</a>
+   <div class="overlay-content">
+       <a href="#About">About</a>
+       <a href="#Services">Services</a>
+       <a href="#Clients">Clients</a>
+       <a href="#Contact">Contact</a>
+   </div>
+</div>
+<div class="main">
+    <h3>Fullscreen Overlay Nav Example</h3>
+    <p>Click on the element below to open the fullscreen overlay navigation menu.</p>
+    <p>In this example, the navigation menu will slide in, from left to right:</p>
+    <span onclick="openNav()">&#9776; open</span>
+</div>
+
+<script>
+    function openNav(){
+        document.getElementsByClassName("sidenav")[0].style.width ="100%";
+    }
+    function closeNav(){
+        document.getElementsByClassName("sidenav")[0].style.width="0";
+    }
+</script>
+</body>
+</html>

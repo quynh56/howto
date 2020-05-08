@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 33</title>
+    <style type="text/css">
+        body{margin:0}
+        .header{
+            padding:50px 20px;
+            font-size:30px;
+            text-align:Center;
+            background: #f1f1f1;
+        }
+        #navbar{
+            overflow:hidden;
+            background:#333;
+            width:100%;
+        }
+        #navbar a{
+            text-decoration:none;
+            float:left;
+            font-size:17px;
+            padding:16px 20px;
+            color:white;
+            display:block;
+            cursor:pointer;
+            text-align:Center;
+        }
+        #navbar a:hover{
+            background:#ccc;
+            color:black;
+        }
+        #navbar a.active{
+            color:white;
+            background:#4CAF50;
+        }
+        .content{
+            font-size:25px;
+            padding:20px 15px;
+        }
+        .sticky{
+            position:fixed;
+            top:0;
+        }
+        .sticky + #navbar{
+            padding-top:60px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Scroll Down</h1>
+    <p>Scroll down to see the sticky effect.</p>
+</div>
+<div id="navbar">
+    <a href="#Home" class="active">Home</a>
+    <a href="#News">News</a>
+    <a href="#Contact">Contact</a>
+</div>
+<div class="content">
+    <h3>Sticky Navigation Example</h3>
+    <p>The navbar will stick to the top when you reach its scroll position.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
+
+<script>
+    window.onscroll =function(){myFunction()};
+   /* function myFunction(){
+        if(document.body.scrollTop >20 || document.documentElement.scrollTop >20){
+            document.getElementById("navbar").style.top ="0";
+        }else{
+            document.getElementById("navbar").style.top ="310px";
+        }
+    }*/
+    var navbar = document.getElementById("navbar");
+    var sticky =navbar.offsetTop;
+   function myFunction(){
+       if(window.pageYOffset >=sticky){
+           navbar.classList.add("sticky");
+       }else{
+           navbar.classList.remove("sticky");
+       }
+   }
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 18.2</title>
+    <style type="text/css">
+        body{
+            margin:0;
+            transition:background-color 0.5s;
+        }
+        .sidenav{
+            position:fixed;
+            top:0;
+            left:0;
+            padding-top: 50px;
+            background:#111;
+            height:100%;
+            width: 0;
+            overflow-x:hidden;
+            transition:0.5s;
+            z-index:1;
+        }
+        .sidenav a{
+            color:#818181;
+            text-decoration:none;
+            display:block;
+            font-size:25px;
+            padding:10px 16px;
+            transition:0.3s;
+        }
+        .sidenav a:hover{color:white;}
+        .sidenav .right{
+            position:absolute;
+            right:0;
+            top:0;
+            font-size:30px;
+            font-weight: bold;
+        }
+        .main{
+            padding:20px 16px;
+            float:left;
+            font-size:18px;
+            height:800px;
+            width:100%;
+            transition:margin-left 0.5s;
+        }
+        .main span{
+            font-size:25px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="sidenav">
+    <a href="#" class="right" onclick="closeNav()">&times;</a>
+    <a href="#About">About</a>
+    <a href="#Services">Services</a>
+    <a href="#Clients">Clients</a>
+    <a href="#Contact">Contact</a>
+</div>
+<div class="main">
+    <h3>Sidenav Push Example</h3>
+    <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+    <span onclick="openNav()">&#9776; open</span>
+</div>
+
+<script>
+    function openNav(){
+        document.getElementsByClassName("sidenav")[0].style.width = "20%";
+        document.getElementsByClassName("main")[0].style.marginLeft ="20%";
+        document.getElementsByClassName("main")[0].style.backgroundColor ="rgba(0,0,0,0.4)";
+    }
+    function closeNav(){
+        document.getElementsByClassName("sidenav")[0].style.width = "0";
+        document.getElementsByClassName("main")[0].style.marginLeft ="0";
+        document.getElementsByClassName("main")[0].style.backgroundColor ="white";
+    }
+</script>
+</body>
+</html>

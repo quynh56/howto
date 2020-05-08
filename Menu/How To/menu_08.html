@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_08</title>
+    <style type="text/css">
+        .tab{
+            border:1px solid #ccc;
+            width:30%;
+            height:300px;
+            background:#f1f1f1;
+            float:left;
+        }
+        .tab button{
+            font-size:17px;
+            background:inherit;
+            width:100%;
+            border:none;
+            padding:20px 10px;
+            text-align:left;
+        }
+        .tab button:hover{
+            background:#ddd;
+        }
+        .tabcontent{
+            padding:0px 30px;
+            font-size: 17px;
+            border: 1px solid #ccc;
+            height:300px;
+            width:60%;
+            display:none;
+            float:left;
+        }
+        .tab button .active{
+            background:#ccc;
+        }
+        .clearfix::after{
+            clear:both;
+            content: "";
+            display:table;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="tab">
+    <button class="tablink" id="defaultOpen" onmousemove="openCity(event,'London')">London</button>
+    <button class="tablink" onmousemove="openCity(event,'Paris')">Paris</button>
+    <button class="tablink" onmousemove="openCity(event,'Tokyo')">Tokyo</button>
+</div>
+<div class="tabcontent" id="London">
+    <h4>London</h4>
+    <p>London is the capital city of England</p>
+</div>
+<div class="tabcontent" id="Paris">
+    <h4>Paris</h4>
+    <p>Paris is the capital of France</p>
+</div>
+<div class="tabcontent" id="Tokyo">
+    <h4>Tokyo</h4>
+    <p>Tokyo is the capital of Japan</p>
+</div>
+<div class="clearfix">
+
+</div>
+<script type="text/javascript">
+    function openCity(evt,cityName){
+        var i,tabcontent,tablink;
+        tabcontent =document.getElementsByClassName("tabcontent");
+        for(i=0;i<tabcontent.length;i++){
+            tabcontent[i].style.display ="none";
+        }
+        tablink =document.getElementsByClassName("tablink");
+        for(i=0;i<tablink.length;i++){
+            tablink[i].className = tablink[i].className .replace("active","");
+        }
+        document.getElementById(cityName).style.display ="block";
+        evt.currentTarget.className += 'active';
+    }
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

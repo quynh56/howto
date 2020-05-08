@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_25</title>
+    <style type="text/css">
+        .menu{
+            background:#dddddd;
+            width:100%;
+            overflow:hidden;
+        }
+        .menu a{
+            text-decoration:none;
+            color:black;
+            border-bottom:3px solid transparent;
+            padding:16px 14px;
+            float:left;
+            display:block;
+        }
+        .menu .active{
+            border-bottom: 3px solid orangered;
+        }
+        .menu a:hover:not(.active){
+            border-bottom: 3px solid orangered;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+</div>
+<div class="main">
+    <h2>Border Links</h2>
+    <p>Hover over the links</p>
+</div>
+</body>
+</html>

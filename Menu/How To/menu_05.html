@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_05</title>
+    <style type="text/css">
+        .tab{
+            border:1px solid #ccc;
+            #background:#f1f1f1;
+            overflow:hidden;
+            width:30%;
+            float:left;
+            height:300px;
+        }
+        .tab button{
+            display:block;
+            padding:11px 30px;
+            width:100%;
+            text-align:left;
+            border:none;
+            background:inherit;
+            font-size:17px
+        }
+        .tab button:hover{
+            background:#ccc;
+        }
+        .tabcontent{
+            float:left;
+            width:65%;
+            border:1px solid #ccc;
+            border-left: none;
+            padding:0 14px;
+            display:none;
+            height:300px;
+        }
+        button .active{
+            background:#ccc;
+        }
+        .topright{
+            float:right;
+            font-size:28px;
+            color:black;
+            cursor:pointer;
+            padding-top:16px;
+        }
+        .topright:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<h2>Vertical Tabs</h2>
+<p>Click on the buttons inside the tabbed menu</p>
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event,'London')" id="defaultOpen">London</button>
+    <button class="tablinks" onclick="openCity(event,'Paris')">Paris</button>
+    <button class="tablinks" onclick="openCity(event,'Tokyo')">Tokyo</button>
+</div>
+<div id="London" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none';" class="topright">&times</span>
+    <h4>London</h4>
+    <p>London is the capital city of England</p>
+</div>
+<div id="Paris" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none';" class="topright">&times</span>
+    <h4>Paris</h4>
+    <p>Paris is the capital of France</p>
+</div>
+<div id="Tokyo" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none';" class="topright">&times</span>
+    <h4>Tokyo</h4>
+    <p>Tokyo is the capital of japan</p>
+</div>
+<script>
+    function openCity(evt,cityName){
+        var tabcontent, tablinks,i;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for(i=0; i < tabcontent.length; i++){
+            tabcontent[i].style.display = 'none';
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for(i=0; i < tablinks.length; i++){
+            tablinks[i].className = tablinks[i].className.replace("active","");
+        }
+        document.getElementById(cityName).style.display ="block";
+        evt.currentTarget.className += 'active';
+    }
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

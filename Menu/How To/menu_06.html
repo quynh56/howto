@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_06</title>
+    <style type="text/css">
+        body{
+            margin:0;
+        }
+        .tab{
+            background:#555;
+            width:100%;
+        }
+        .tab .tablinks{
+            background:#555;
+            width:24.5%;
+            padding: 14px 16px;
+            color:white;
+            border:none;
+            margin:0;
+            outline:none;
+            font-size:17px
+
+        }
+        .tab button:hover{
+            background: #ccc;
+        }
+        .tabcontent{
+            color:white;
+            text-align:center;
+            padding: 50px;
+            display:none;
+        }
+        #London{background:red;}
+        #Paris{background:green;}
+        #Tokyo{background:blue;}
+        #Oslo{background: orange;}
+    </style>
+</head>
+<body>
+<div class="tabcontent" id="London">
+    <h2>London</h2>
+    <p>London is the capital city of England</p>
+</div>
+<div class="tabcontent" id="Paris">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France</p>
+</div>
+<div class="tabcontent" id="Tokyo">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan</p>
+</div>
+<div class="tabcontent" id="Oslo">
+    <h2>Oslo</h2>
+    <p>Oslo is the capital of Norway</p>
+</div>
+<div class="tab">
+    <button class="tablinks" onclick="openCity('London',this,'red')" id="defaultOpen">London</button>
+    <button class="tablinks" onclick="openCity('Paris',this,'green')">Paris</button>
+    <button class="tablinks" onclick="openCity('Tokyo',this,'blue')">Tokyo</button>
+    <button class="tablinks" onclick="openCity('Oslo',this,'orange')">Oslo</button>
+</div>
+
+
+<script type="text/javascript">
+    function openCity(cityName,elmt,color){
+        var i ,tabcontent,tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for(i=0;i< tabcontent.length; i++){
+            tabcontent[i].style.display= 'none';
+        }
+        tablinks =document.getElementsByClassName("tablinks");
+        for(i=0;i<tablinks.length;i++){
+            tablinks[i].style.backgroundColor ="";
+        }
+        document.getElementById(cityName).style.display ="block";
+        elmt.style.backgroundColor =color;
+
+    }
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

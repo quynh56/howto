@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 08</title>
+    <style type="text/css">
+        .tab{
+            width:20%;
+            overflow:hidden;
+            background: #f1f1f1;
+            border:1px solid #cccccc;
+            height:500px;
+            float:left;
+        }
+        button{
+            border:none;
+            display:block;
+            padding:20px 10px;
+            text-align:left;
+            background: #f1f1f1;
+            cursor:pointer;
+            font-size:18px;
+            width:100%;
+        }
+        button:hover{background:#cccccc}
+        .tabcontent{
+            float:left;
+            width: 75%;
+            border:1px solid #ccc;
+            border-left:none;
+            height:500px;
+            padding-left:30px;
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="tab">
+    <button class="tablink" onmouseover="openCity(event,'London')" >London</button>
+    <button class="tablink" onmouseover="openCity(event,'Paris')">Paris</button>
+    <button class="tablink" onmouseover="openCity(event,'Tokyo')">Tokyo</button>
+</div>
+<div class="tabcontent" id="London">
+    <h3>London</h3>
+    <p>London is the capital city of England</p>
+</div>
+<div class="tabcontent" id="Paris">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France</p>
+</div>
+<div class="tabcontent" id="Tokyo">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan</p>
+</div>
+
+<script>
+    function openCity(evt,cityName){
+        var tablink, tabcontent,i;
+        tabcontent =document.getElementsByClassName("tabcontent");
+        for(i=0;i<tabcontent.length;i++){
+            tabcontent[i].style.display ="none";
+        }
+        tablink = document.getElementsByClassName("tablink");
+        for(i=0;i<tablink.length;i++){
+            tablink[i].className = tablink[i].className.replace(" active"," ");
+        }
+        document.getElementById(cityName).style.display ="block";
+        evt.currentTarget.className += " active";
+    }
+
+</script>
+</body>
+</html>

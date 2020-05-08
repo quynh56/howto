@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu05</title>
+    <style type="text/css">
+        .tab{
+            overflow:auto;
+            background:#f1f1f1;
+            width:20%;
+            height:500px;
+            border:1px solid #cccccc;
+            float:left;
+        }
+        .tab button{
+            width:100%;
+            display:block;
+            padding:26px 24px;
+            font-size:16px;
+            border:none;
+            cursor:pointer;
+            background:#f1f1f1;
+            text-align:left;
+        }
+        .tab button.active{
+            background:#ccc;
+        }
+        .tab button:hover{
+            background:#ddd;
+        }
+        .tabcontent{
+            float:left;
+            width:75%;
+            border:1px solid #ccc;
+            border-left:none;
+            height:484px;
+            padding:16px;
+            padding-bottom:0;
+            font-size:16px;
+            display:none;
+        }
+        .right{
+            float:right;
+            font-weight:bold;
+            font-size:28px;
+            cursor:pointer;
+
+        }
+        .right:hover{color:red;}
+    </style>
+</head>
+<body>
+<div class="tab">
+    <button class="tablink" onclick="openCity(event,'London')" id="defaultOpen">London</button>
+    <button class="tablink" onclick="openCity(event,'Paris')">Paris</button>
+    <button class="tablink" onclick="openCity(event,'Tokyo')">Tokyo</button>
+</div>
+<div class="tabcontent" id="London">
+    <span class="right" onclick="this.parentElement.style.display='none';">&times;</span>
+    <h3>London</h3>
+    <p>London is the capital city of England.</p>
+</div>
+<div class="tabcontent" id="Paris">
+    <span class="right" onclick="this.parentElement.style.display='none'">&times;</span>
+    <h3>Paris</h3>
+    <p>Paris is the capital of France</p>
+</div>
+<div class="tabcontent" id="Tokyo">
+    <span class="right" onclick="this.parentElement.style.display='none'">&times;</span>
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan</p>
+</div>
+
+<script>
+    function openCity(evt,cityName){
+        //khai báo tất cả các biến
+        var tabcontent,tablink,i;
+        //nhận phần tử với class="Tabcontent" và ẩn chúng
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for(i=0;i<tabcontent.length;i++){
+            tabcontent[i].style.display ="none";
+        }
+        //nhận tất cả phần tử với class="tablink" và  xóa lớp "active"
+        tablink =document.getElementsByClassName("tablink");
+        for(i=0;i<tablink.length;i++){
+            tablink[i].className = tablink[i].className.replace(" active"," ");
+        }
+        //hiển thị tab hiện tại và thêm "active" vào liên kết đã mở tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

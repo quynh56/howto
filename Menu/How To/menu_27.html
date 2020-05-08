@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_27</title>
+    <style type="text/css">
+        .topnav{
+            background:black;
+            overflow: hidden;
+        }
+        .topnav a{
+            text-decoration:none;
+            color:white;
+            float:left;
+            padding:14px 16px;
+            font-size:17px;
+            text-align:center;
+        }
+        .topnav-center a{
+            float:none;
+            position:absolute;
+            left:50%;
+        }
+        .topnav .topnav-right{
+            float:right;
+        }
+        .topnav-center .active{
+            background:#4caf50;
+            color:white;
+        }
+        .topnav a:hover:not(.active){
+            background:#777777;
+            color:black;
+        }
+        @media screen and(max-width:600px){
+            .topnav a, .topnav-right{
+                float:none;
+                display:block;
+            }
+            .topnav-center{
+                position:relative;
+                left:0;
+                top:0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <div class="topnav-center">
+        <a href="#home" class="active">Home</a>
+    </div>
+    <a href="new">News</a>
+    <a href="#contact">Contact</a>
+    <div class="topnav-right">
+        <a href="#search">Search</a>
+        <a href="#about">About</a>
+    </div>
+</div>
+<div>
+    <h1>Responsive Top Navigation with Centered and Right-Aligned Links</h1>
+    <p>Resize the browser window to see the responsive effect.</p>
+</div>
+</body>
+</html>

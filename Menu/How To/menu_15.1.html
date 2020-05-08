@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_15.1</title>
+    <style type="text/css">
+        .topnav{
+            position:fixed;
+            top:0;
+            left:0;
+            width:0;
+            float:left;
+            background:black;
+            z-index:1;
+            overflow-x:hidden;
+            height:100%;
+        }
+        .topnav a{
+            color:#ccc;
+            font-size:25px;
+            padding: 20px;
+            text-decoration:none;
+            display:block;
+        }
+        .topnav .topright{
+            position:absolute;
+            right:15px;
+            top:0
+        }
+        #main{
+            font-size: 25px;
+        }
+        #main span{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="topnav" id="sidenav">
+    <a href="#" class="topright" onclick="closeNav();">&times</a>
+    <a href="#about"> About</a>
+    <a href="#services">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+<div id="main">
+    <h2>SideNav Push Example</h2>
+    <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+    <span onclick="openNav();" >&#9776; open</span>
+</div>
+<script>
+    function openNav(){
+        document.getElementById("sidenav").style.width="20%";
+        document.getElementById("main").style.marginLeft="25%";
+    }
+    function closeNav(){
+        document.getElementById("sidenav").style.width="0";
+        document.getElementById("main").style.marginLeft ="0";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_34</title>
+    <style type="text/css">
+        body{margin:0;}
+        .header{
+            text-align:center;
+            font-size:35px;
+            padding:20px;
+            background:#dddddd;
+        }
+        #navbar {
+            background:black;
+            overflow:hidden;
+        }
+        #navbar a{
+            text-decoration:none;
+            color:white;
+            font-size:17px;
+            text-align:center;
+            padding:14px 16px;
+            float:left;
+        }
+        #navbar .active{
+            background:#4caf50;
+            color:white;
+        }
+        #navbar a:hover:not(.active){
+            background:#e9e9e9;
+            color:black;
+        }
+        .main{
+            font-size:30px;
+            padding: 20px 15px;
+        }
+        .sticky{
+            position:fixed;
+            top:0;
+            width:100%;
+        }
+        .sticky+ .main{
+            padding:16px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h2>Scroll Downs</h2>
+    <p>Scroll down to see the sticky effect</p>
+</div>
+<div id="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+</div>
+<div class="main">
+    <h3>Sticky Navigation Example</h3>
+    <p>The navbar will stick to the top when you reach its scroll position.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
+
+<script type="text/javascript">
+    window.onscroll =function(){myFunction()};
+    var navbar =document.getElementById("navbar");
+    var sticky =navbar.offsetTop;
+    function myFunction(){
+        if(window.pageYOffset >=sticky){
+            navbar.classList.add("sticky");
+        }else{
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+</body>
+</html>

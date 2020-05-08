@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_17</title>
+    <style type="text/css">
+        .menubar{
+            width:0;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1;
+            height:100%;
+           overflow-x:hidden;
+            padding-top:15%;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.9);
+            transition:0.5s;
+        }
+
+        .menubar  a{
+            padding:10px;
+            text-align:center;
+            font-size:50px;
+            color:#777777;
+            text-decoration:none;
+            display:block;
+            transition:0.3s;
+        }
+        .menubar .topright{
+            position:absolute;
+            right:25px;
+            top:15px;
+            font-size: 50px;
+        }
+        .menubar a:hover, .menubar a:focus{
+            color:white;
+        }
+        #main span{
+            font-size:30px;
+            cursor:pointer;
+
+        }
+    </style>
+</head>
+<body>
+<div id="myNav" class="menubar">
+    <a href="#" onclick="closeNav();" class="topright">&times;</a>
+    <div class="content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+<div id="main">
+    <h2>Fullscreen Overlay Nav Example</h2>
+    <p>Click on the element below to open the fullscreen overlay navigation menu.</p>
+    <p>In this example, the navigation menu will slide in, from left to right:</p>
+    <span onclick="openNav();">&#9776;open</span>
+</div>
+
+<script type="text/javascript">
+    function openNav(){
+        document.getElementById("myNav").style.width= "100%";
+    }
+    function closeNav(){
+        document.getElementById("myNav").style.width="0";
+
+    }
+</script>
+</body>
+</html>

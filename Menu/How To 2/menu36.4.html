@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 36.4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+       .navbar{
+           position:relative;
+
+       }
+        .dropdown{
+            background: #4CAF50;
+            border:none;
+            color:white;
+            padding:16px;
+            font-size:17px;
+        }
+        .search{
+            border:1px solid #ccc;
+            position:absolute;
+            display:none;
+            overflow:hidden;
+            background: #f1f1f1;
+        }
+        .search input[type="text"]{
+            padding:16px;
+            font-size:17px;
+            border:1px solid #ddd;
+            width:100%;
+            border-top:none;
+        }
+
+        .search a{
+            display:block;
+            padding:16px;
+            color:black;
+            text-decoration:none;
+        }
+       .search a:hover{
+           background:#ccc;
+       }
+       .show{display:block;}
+       /* .label{
+            border-bottom:1px solid #ddd;
+            padding:16px;
+            width:100%;
+        }
+       .search input[type="text"]:focus{outline:3px solid #ddd;}
+        .label:focus{outline:3px solid #ddd}
+
+        */
+    </style>
+</head>
+<body>
+<h2>Search/Filter Dropdown</h2>
+<p>Click on the button to open the dropdown menu, and use the input field to search for a specific dropdown link.</p>
+<div class="navbar" >
+    <button onclick="myFunction()" class="dropdown">Dropdown</button>
+    <div class="search" id="myDrop">
+           <!-- <i class="fa fa-search" aria-hidden="true"></i>-->
+            <input type="text" name="search" id="mySearch" placeholder="Search.." onkeyup="searchFunction()">
+            <a href="#About">About</a>
+            <a href="#Base">Base</a>
+            <a href="#Blog">Blog</a>
+            <a href="#Contact">Contact</a>
+            <a href="#Custom">Custom</a>
+            <a href="#Support">Support</a>
+            <a href="#Tools">Tools</a>
+    </div>
+</div>
+<script>
+    function myFunction(){
+        document.getElementsByClassName("search")[0].classList.toggle("show");
+    }
+   function searchFunction(){
+       var filter,a, input,i,li;
+       input = document.getElementById("mySearch");
+       filter = input.value.toUpperCase();
+       div = document.getElementById("myDrop");
+       a = div.getElementsByTagName("a");
+       for(i=0; i< a.length ; i++){
+           txtValue = a[i].textContent || a[i].innerText;
+           if(txtValue.toUpperCase().indexOf(filter) >-1){
+               a[i].style.display = " ";
+           }else{
+               a[i].style.display ="none";
+           }
+       }
+   }
+</script>
+</body>
+</html>

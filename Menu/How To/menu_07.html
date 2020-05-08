@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_07</title>
+    <style type="text/css">
+        body{
+            margin:0;
+            height:100%;
+        }
+        .tab{
+            background: #555;
+            width:100%;
+        }
+        .tab button{
+            color: white;
+            font-size:17px;
+            padding:20px 50px;
+            margin: 0;
+            background:#555;
+            border:none;
+        }
+        .tab button:hover{
+            background:#777;
+        }
+        .tabcontent{
+            color:white;
+            padding:100px 20px;
+            display:none;
+            height:100%;
+        }
+        #Home{background:red;}
+        #News{background:green;}
+        #Contact{background:blue;}
+        #About{background:orange}
+    </style>
+</head>
+<body>
+<div class="tab">
+    <button class="tablink" id="defaultOpen" onclick="openPage('Home',this,'red')">Home</button>
+    <button class="tablink" onclick="openPage('News',this,'green')">News</button>
+    <button class="tablink" onclick="openPage('Contact',this,'blue')">Contact</button>
+    <button class="tablink" onclick="openPage('About',this,'orange')">About</button>
+</div>
+<div class="tabcontent" id="Home">
+    <h2>Tokyo</h2>
+    <p>London is where the heart is ...</p>
+</div>
+<div class="tabcontent" id="News">
+    <h2>News</h2>
+    <p>Some news this fine day!</p>
+</div>
+<div class="tabcontent" id="Contact">
+    <h2>Contact</h2>
+    <p>Get in touch, or swing by for a cup of coffe</p>
+</div>
+<div class="tabcontent" id="About">
+    <h2>About</h2>
+    <p>Who we are and what we do</p>
+</div>
+
+<script>
+    function openPage(pageName, elmt,color){
+        var i, tabcontent,tablink;
+        tabcontent =document.getElementsByClassName("tabcontent");
+        for(i=0;i < tabcontent.length; i++){
+            tabcontent[i].style.display = "none";
+        }
+        tablink =document.getElementsByClassName("tablink");
+        for(i=0;i< tablink.length ; i++){
+            tablink[i].style.backgroundColor ="";
+        }
+        document.getElementById(pageName).style.display =" block";
+        elmt.style.backgroundColor =color;
+    }
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

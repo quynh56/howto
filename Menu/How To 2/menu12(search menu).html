@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 12</title>
+    <style type="text/css">
+        #menubar{
+            width:20%;
+            background:#777777;
+            overflow:hidden;
+            float:left;
+            height:700px;
+        }
+        #menubar h2{
+            padding:20px 14px;
+            margin:0;
+        }
+        #menubar input[type="text"]{
+            width:90%;
+            font-size:22px;
+            padding: 16px 14px;
+
+        }
+        #menubar ul{
+            padding:0;
+            margin:0;
+        }
+        #menubar li{list-style:none;}
+        #menubar a{
+            display:block;
+            text-decoration:none;
+            padding:14px 16px;
+            width:100%;
+            color:black;
+            background:#777777;
+            font-size:20px;
+            text-align:left;
+        }
+        #menubar li a:hover{
+            background:#eeeeee;
+        }
+        .right{
+            float:left;
+            width:75%;
+            padding:20px 14px;
+            background:#cccccc;
+            height:660px;
+        }
+    </style>
+</head>
+<body>
+<div id="menubar" >
+    <h2>Menu</h2>
+    <input type="text" name="search" id="mySearch" placeholder="search" onkeyup="myFunction()">
+    <ul id="myMenu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">PHP</a></li>
+        <li><a href="#">Python</a></li>
+        <li><a href="#">jQuery</a></li>
+        <li><a href="#">SQL</a></li>
+        <li><a href="#">Bootstrap</a></li>
+        <li><a href="#">Node.js</a></li>
+    </ul>
+</div>
+<div class="right">
+    <h2>Page Content</h2>
+    <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text...</p>
+</div>
+
+<script>
+    function myFunction(){
+        var ul,li,a,i,filter,input;
+         input =document.getElementById("mySearch");
+
+        filter = input.value.toUpperCase();
+        ul=document.getElementById("myMenu");
+        li = document.getElementsByTagName("LI");
+        //lặp qua tất cả các mục danh sách và ẩn những người không khớp vs truy vấn tìm kiếm
+        for(i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("A")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+</body>
+</html>

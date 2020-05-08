@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 19</title>
+    <style type="text/css">
+        body{
+            margin:0;
+        }
+        .sidenav{
+            float:left;
+        }
+        .sidenav a{
+            padding:16px 14px;
+            width:100px;
+            position:absolute;
+            left:-80px;
+            transition:0.5s;
+            text-decoration:none;
+            font-size:20px;
+            color:white;
+            border-radius:0px 4px 4px 0px;
+        }
+        .sidenav a:hover{left:0px;}
+        #About{
+            background:#4CAF50;
+             top:20px;
+        }
+        #Blog{
+            background: #2196F3;
+            top:80px;
+        }
+        #Project{
+            background:#f44336;
+            top:140px;
+        }
+       #Contact{
+           background:#555;
+           top:200px;
+       }
+        .main{
+            float:left;
+            margin-left:100px;
+        }
+    </style>
+</head>
+<body>
+<div class="sidenav">
+    <a href="#About" id="About">About</a>
+    <a href="#Blog" id="Blog">Blog</a>
+    <a href="#Project" id="Project">Project</a>
+    <a href="#Contact" id="Contact">Contact</a>
+</div>
+<div class="main">
+    <h3>Hoverable Sidenav Buttons</h3>
+    <p>Hoer over the buttons in the left side navigation to open them</p>
+</div>
+</body>
+</html>

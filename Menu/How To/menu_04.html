@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_04</title>
+    <style type="text/css">
+        .tab{
+            border:1px solid #ccc;
+            background:#f1f1f1;
+            overflow: hidden;
+        }
+        .tab button{
+            border:none;
+            font-size:15px;
+            background-color:inherit;
+            padding: 14px 16px;
+            float:left;
+            outline:none;
+        }
+        .tab button:hover{
+            background-color:#ddd;
+        }
+        .tab button.active{
+            background:#ccc;
+        }
+        .tabcontent{
+            padding:6px 12px;
+            border: 1px solid #ccc;
+            border-top:none;
+            display:none;
+        }
+        .topright{
+            float:right;
+            color:black;
+            font-size:28px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+        .topright:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<h1>Tabs</h1>
+<p>Click on the buttons inside the tabbed menu:</p>
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event,'London')"; id="defaultOpen">London</button>
+    <button class="tablinks" onclick="openCity(event,'Paris')">Paris</button>
+    <button class="tablinks" onclick="openCity(event,'Tokyo')">Tokyo</button>
+</div>
+<div id="London" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <h3>London</h3>
+    <p>London is the capital city of the England.</p>
+</div>
+<div id="Paris" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <h3>Paris</h3>
+    <p>Paris is the capital of France</p>
+</div>
+<div id="Tokyo" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+<script>
+    function openCity(evt,cityName){
+        var tabcontent,tablinks,i;
+        tabcontent=document.getElementsByClassName("tabcontent");
+        for(i=0;i<tabcontent.length;i++){
+            tabcontent[i].style.display='none';
+        }
+        tablinks=document.getElementsByClassName("tablinks");
+        for(i=0;i<tablinks.length;i++){
+            tablinks[i].className =tablinks[i].className.replace("active","");
+        }
+        document.getElementById(cityName).style.display='block';
+        evt.currentTarget.className +='active';
+    }
+   document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

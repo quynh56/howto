@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 36</title>
+    <style type="text/css">
+        .btn{
+            position:relative;
+        }
+        .dropdown{
+            border:none;
+            padding:16px;
+            font-size:17px;
+            color:white;
+            background:#2196F3;
+        }
+        .top-content{
+            display:none;
+            position:absolute;
+            overflow:hidden;
+            min-width:160px;
+            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .top-content a{
+            text-decoration:none;
+            font-size:17px;
+            display:block;
+            color:black;
+            padding:16px;
+            background:#f1f1f1;
+        }
+        .top-content a:hover{background:#ccc;}
+        .show{display:block;}
+    </style>
+</head>
+<body>
+<div class="btn" >
+    <button onclick="myFunction()" class="dropdown">Dropdown</button>
+    <div class="top-content" id="myDrop">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+</div>
+<script>
+    //khi người dùng nhấp vào nút, chuyển đối giữa ẩn và hiển thị nội dung thả xuống
+    function myFunction(){
+        document.getElementById("myDrop").classList.toggle("show");
+    }
+    //đóng danh sách thả xuống khi người dùng nhấp vào bên ngoài
+    window.onclick =function(event){
+        /*
+        - bởi vì khi câu lệnh if của ta trả về flase và với ! toán tử sẽ trả về true. điều này xảy ra bởi vì khi ta
+        nhấp vào bên trong div, mục tiêu thực sự của ta là <a> phần tử không có lớp .drop-content.
+        - khi nhấp vào bên ngoài <div> thì nó cũng không có lớp .drop-content . vì vậy, tuyên bố của ta luôn luôn trở lại false nhưng với ! toán tử nó trở thành true
+         -matches: phương pháp kiểm tra để xem nếu Element có thể được lựa chọn bởi các quy định selectorString kiểm tra nếu các yếu tố "là
+          */
+        if(!event.target.matches('.dropdown')){
+            var dropdown =document.getElementsByClassName("top-content");
+            var i;
+            for(i=0;i<dropdown.length;i++){
+                var openDropdown =dropdown[i];
+                if(openDropdown.classList.contains('show')){
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

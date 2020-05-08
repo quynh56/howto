@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 40</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        body{margin:0}
+        .topnav{
+            overflow:hidden;
+            background:black;
+        }
+        .topnav a{
+            text-decoration:none;
+            color:white;
+            font-size:17px;
+            float:left;
+            padding:16px;
+        }
+        .dropdown{
+            overflow:hidden;
+            float:left;
+        }
+        .dropbtn{
+            border:none;
+            padding:16px;
+            font-size:17px;
+            color:white;
+            background:black;
+            display:block;
+        }
+        .drop-content{
+            position:absolute;
+            overflow:hidden;
+            left:0;
+            width:100%;
+            display:none;
+            background:#ccc;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .drop-content .header h2{
+            background:red;
+            margin:0;
+            padding: 50px 20px;
+            font-size:30px;
+            color:white;
+        }
+        .row .column{
+            width:33.33%;
+            float:left;
+            font-size:17px;
+            text-align:left;
+            background:#ccc;
+        }
+        .column h4{padding:0 14px}
+        .column a{
+            display:block;
+            float:none;
+            text-align:left;
+            padding:16px;
+            font-size:17px;
+            color:black;
+        }
+        .topnav a:hover , .dropdown:hover .dropbtn{ background:red;}
+        .dropdown:hover .drop-content{display:block;}
+        .column a:hover{background:#ddd;}
+        @media screen and (max-width:600px){
+            .row .column{
+                width:100%;
+                display:block;
+                float:none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <a href="#Home">Home</a>
+    <a href="#News">News</a>
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown <i class="fa fa-caret-down"></i></button>
+        <div class="drop-content">
+            <div class="header">
+                <h2>Mega Menu</h2>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <h4>Category 1</h4>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+                <div class="column">
+                    <h4>Category 2</h4>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+                <div class="column">
+                    <h4>Category 3</h4>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

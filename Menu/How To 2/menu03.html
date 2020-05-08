@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu03</title>
+    <style type="text/css">
+        body{
+            margin:0;
+        }
+        .accordion{
+            background:#eee;
+            padding:18px;
+            color:#444;
+            font-size:16px;
+            border:none;
+            width:100%;
+            text-align:left;
+            transition:0.4s;
+            outline:none;
+        }
+        .active, .accordion:hover{
+            background:#ccc;
+        }
+        .accordion:after{
+            content:'\002B';
+            float:right;
+        }
+        .active:after{
+            content:"\2212";
+            float:right;
+        }
+        .panel{
+            padding:0 18px;
+            font-size:16px;
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.4s ease-out;
+        }
+    </style>
+</head>
+<body>
+<button class="accordion">Section 1</button>
+<div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat.</p>
+</div>
+<button class="accordion">Section 2</button>
+<div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat.</p>
+</div>
+<button class="accordion">Section 3</button>
+<div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat.</p>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for(i=0;i<acc.length;i++){
+        acc[i].addEventListener("click",function(){
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if(panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            }
+            else{
+                panel.style.maxHeight =panel.scrollHeight + "px";
+            }
+        });
+
+    }
+</script>
+</body>
+</html>

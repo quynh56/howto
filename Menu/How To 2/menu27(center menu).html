@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 27</title>
+    <style type="text/css">
+        body{margin:0}
+        .topnav{
+            background:#333;
+            overflow:hidden;
+            width:100%;
+            position:relative;
+        }
+        .topnav a{
+            text-align:center;
+            display:block;
+            float:left;
+            text-decoration:none;
+            font-size:17px;
+            color:white;
+            cursor:pointer;
+            padding:14px 16px;
+        }
+        .topnav a:hover{
+            background:#ddd;
+            color:black;
+        }
+       .topnav a.active{
+            color:white;
+            background:#4CAF50;
+        }
+        .topnav .bar-center a{
+            float:none;
+            position:absolute;
+            left:50%;
+            top:0;
+        }
+        .bar-right{
+            float:right;
+        }
+        @media screen and (max-width:600px){
+            .topnav a, .bar-right{
+                display:block;
+                float:none;
+                width:100%;
+            }
+            .topnav .bar-center a{
+                position:relative;
+                left:0;
+                top:0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <div class="bar-center">
+        <a href="#Home" class="active">Home</a>
+    </div>
+    <div class="bar-left">
+        <a href="#News">News</a>
+        <a href="#Contact">Contact</a>
+    </div>
+    <div class="bar-right">
+        <a href="#Search">Search</a>
+        <a href="#About">About</a>
+    </div>
+</div>
+<div class="content">
+    <h1>Responsive Top Navigation with Centered and Right-Aligned Links</h1>
+    <p>Resize the browser window to see the responsive effect</p>
+</div>
+</body>
+</html>

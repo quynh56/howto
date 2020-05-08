@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_11</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .topnav{
+            overflow:auto;
+            background:#555;
+            width:100%;
+        }
+        .topnav a{
+            text-decoration:none;
+            color: white;
+            background:#555;
+            font-size:17px;
+            padding:20px 14px;
+            cursor:pointer;
+            float:left;
+        }
+        .topnav a:hover{
+            background:black;
+        }
+        .topnav .active{
+            background:#4CAF50;
+        }
+        @media screen and(max-width:500px){
+            .topnav a{
+                float:none;
+                display:block;
+            }
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Responsive Navigation Bar with Icons</h1>
+    <p>Try to resize the browser window to see the responsive</p>
+</div>
+<div class="topnav">
+    <a href="#Home" class="active"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="#Search"><i class="fa fa-fw fa-search"></i>Search</a>
+    <a href="#Contact"><i class="fa fa-fw fa-envelope"></i>Conract</a>
+    <a href="#Login"><i class="fa fa-fw fa-user"></i>Login</a>
+</div>
+</body>
+</html>

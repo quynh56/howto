@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_18</title>
+    <style type="text/css">
+        .menubar{
+            padding-top:50px;
+            width:0;
+            height:100%;
+            overflow-x:hidden;
+            position:fixed;
+            background:black;
+            top:0;
+            left:0;
+            transition:0.5s;
+        }
+        .menubar a{
+            font-size:25px;
+            text-decoration:none;
+            color:#777;
+            padding:10px;
+            display:block;
+        }
+        .menubar a:hover{color:white;}
+        .menubar .topright{
+            position:absolute;
+            font-size:40px;
+            right:15px;
+            top:0;
+        }
+        #main{
+            float:left;
+            font-size:25px;
+            height: 1000px;
+            transition:margin-left 0.5s;
+        }
+        #main span{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="menubar" id="myNav">
+    <a href="#" onclick="closeNav();" class="topright">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+<div id="main">
+    <h2>Sidenav push Example</h2>
+    <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+    <span onclick="openNav();">&#9776;open</span>
+</div>
+
+<script type="text/javascript">
+    function openNav(){
+        document.getElementById("myNav").style.width = "20%";
+        document.getElementById("main").style.marginLeft="20%";
+        document.body.style.backgroundColor= "rgba(0,0,0,0.4)";
+    }
+    function closeNav(){
+        document.getElementById("myNav").style.width="0";
+        document.getElementById("main").style.marginLeft="0";
+        document.body.style.backgroundColor="white";
+    }
+</script>
+</body>
+</html>

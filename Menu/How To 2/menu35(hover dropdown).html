@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 35</title>
+    <style type="text/css">
+        .btn{
+            position:relative;
+
+        }
+        .btn .dropdown{
+            color:white;
+            background:#4CAF50;
+            border:none;
+            font-size:17px;
+            padding:16px 14px;
+        }
+        .btn-content{
+            position:absolute;
+            background:#f1f1f1;
+            width: 150px;
+            display:none;
+            overflow:hidden;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .btn-content a{
+            text-decoration:none;
+            font-size:17px;
+            color:black;
+            display:block;
+            padding:16px 14px;
+        }
+        .btn:hover .btn-content{
+            display:block;
+        }
+        .btn-content a:hover{
+            background:#ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="btn">
+    <button class="dropdown">Dropdown</button>
+    <div class="btn-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+    </div>
+</div>
+</body>
+</html>

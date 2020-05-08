@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 16</title>
+    <style type="text/css">
+        body{margin:0}
+        .sidebar{
+            width:20%;
+            background:#f1f1f1;
+            overflow:auto;
+            position:fixed;
+            height:100%;
+            top:0;
+            left:0;
+        }
+        .sidebar a{
+            display:block;
+            background:#f1f1f1;
+            text-decoration:none;
+            padding:14px 16px;
+            color:black;
+            font-size:17px
+        }
+        .sidebar a:hover{
+            background:#555555;
+            color:white;
+        }
+        .sidebar a.active{
+            color:white;
+            background:#4CAF50;
+        }
+        .main{
+            float:left;
+            margin-left:300px;
+            padding:20px 15px;
+
+        }
+        @media screen and (max-width: 700px){
+            .sidebar{
+                width:100%;
+                text-align:center;
+                position:relative;
+                height:auto;
+            }
+            .sidebar a{ float:left;}
+            div.main{
+                margin-left:0;
+                float:none;
+            }
+        }
+        @media screen and (max-width:400px){
+            .sidebar{display:block;}
+            .sidebar a{
+                text-align:center;
+                float:none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="sidebar">
+    <a href="#Home" class="active">Home</a>
+    <a href="#News">New</a>
+    <a href="#Contact">Contact</a>
+    <a href="#About">About</a>
+</div>
+<div class="main">
+    <h2>Responsive Sidebar Example</h2>
+    <p>This example use media queries to transform the sidebar to a top navigation bar
+        when the screen size is 700px or less.</p>
+    <p>We have also added a media query for screens that are 400px or less, which will vertically
+        stack and center the navigation links.</p>
+    <h4>Resize the browser window to see the effect.</h4>
+</div>
+</body>
+</html>

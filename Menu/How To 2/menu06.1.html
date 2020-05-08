@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu06.1</title>
+    <style type="text/css">
+        button{
+            float:left;
+            width:25%;
+            padding:16px 14px;
+            font-size:20px;
+            text-align:center;
+            cursor:pointer;
+            border:none;
+            background:#555;
+            color:white;
+        }
+        button:hover{
+            background:#777;
+        }
+        .tabcontent{
+            font-size: 23px;
+            text-align:center;
+            padding:200px;
+            color:white;
+            display:none;
+
+        }
+        #London{background:red;}
+        #Paris{background:green;}
+        #Tokyo{background:blue;}
+        #Oslo{background:orange;}
+    </style>
+</head>
+<body>
+<div class="tabcontent" id="London">
+    <h3>London</h3>
+    <p>London is the capital city of England </p>
+</div>
+<div class="tabcontent" id="Paris">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France</p>
+</div>
+<div class="tabcontent" id="Tokyo">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan</p>
+</div>
+<div class="tabcontent" id="Oslo">
+    <h3>Oslo</h3>
+    <p>Oslo is the capital of Norway</p>
+</div>
+<button class="tablink" id="defaultOpen" onclick="openCity(event,'London','red')">London</button>
+<button class="tablink" onclick="openCity(event,'Paris','green')">Paris</button>
+<button class="tablink" onclick="openCity(event,'Tokyo','blue')">Tokyo</button>
+<button class="tablink" onclick="openCity(event,'Oslo','orange')">Oslo</button>
+
+<script>
+    function openCity(evt,cityName,color){
+        var tablink,tabcontent,i;
+        tabcontent=document.getElementsByClassName("tabcontent");
+        for(i=0;i<tabcontent.length;i++){
+            tabcontent[i].style.display = "none";
+        }
+        tablink = document.getElementsByClassName("tablink");
+        for(i=0;i<tablink.length;i++){
+            tablink[i].style.backgroundColor ="";
+        }
+        document.getElementById(cityName).style.display ="block";
+        evt.currentTarget.style.backgroundColor = color;
+    }
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

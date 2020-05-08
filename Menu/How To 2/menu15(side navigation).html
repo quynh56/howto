@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu 15</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        #myMenu{
+            width:0;
+            float:left;
+            overflow:hidden;
+            background:#333;
+            height:500px;
+            transition:0.4s;
+            position:fixed;
+            top:0;
+            left:0;
+            padding-top: 60px;
+
+        }
+        #myMenu a{
+            color:#818181;
+            background:#333;
+            font-size:30px;
+            padding:14px 8px;
+            display:block;
+            text-decoration:none;
+            text-align:left;
+        }
+        #myMenu a:hover{
+            color:white;
+        }
+        #myMenu .right{
+           position:absolute;
+            top:0;
+            right:15px;
+            font-size:36px;
+        }
+        span {
+            font-size:30px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+<div id="myMenu">
+
+    <a href="#" class="right" onclick="closeMenu();">&times;</a>
+    <a href="#About">About</a>
+    <a href="#Services">Services</a>
+    <a href="#Clients">CLients</a>
+    <a href="#Contact">Contact</a>
+</div>
+<div class="main">
+    <h3>Animated Sidenav Example</h3>
+    <p>Click on the element below to open the side navigation menu.</p>
+    <span class="bar" onclick="openMenu();"><i class="fa fa-bars" aria-hidden="true"></i>  Open</span>
+</div>
+
+
+
+<script>
+    function openMenu(){
+        document.getElementById("myMenu").style.width ="250px";
+    }
+    function closeMenu(){
+        document.getElementById("myMenu").style.width ="0px";
+    }
+</script>
+</body>
+</html>

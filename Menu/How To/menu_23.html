@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_23</title>
+    <style type="text/css">
+        .menu{
+            position:fixed;
+            bottom:0;
+            background:black;
+            overflow:hidden;
+            width:100%;
+
+        }
+        .menu a{
+            float:left;
+            display:block;
+            text-decoration:none;
+            color:white;
+            padding:16px;
+            font-size:17px;
+            text-align:Center;
+        }
+        .menu a:hover:not(.active){
+            background:white;
+            color:black;
+        }
+        .menu .active{
+            background:#4CAF50;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+</div>
+<div>
+    <h1>Bottom Navigation Bar</h1>
+    <p>Some text some text some text</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu35.3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .topnav{
+            background:black;
+            overflow:hidden;
+        }
+        .topnav a{
+            display:block;
+            text-decoration:none;
+            float:left;
+            padding:16px;
+            color:white;
+            font-size:17px;
+        }
+        .btn{
+            float:left;
+            overflow:hidden;
+            display:inline-block;
+        }
+        .dropdown{
+            color:white;
+            background:black;
+            border:none;
+            font-size:17px;
+            text-align:center;
+            padding:16px;
+
+        }
+        .drop-content{
+            position:absolute;
+            min-width:160px;
+            background:#f1f1f1;
+            display:none;
+
+        }
+        .drop-content a{
+            float:none;
+            display:block;
+            padding:16px;
+            z-index:1;
+            color:black;
+        }
+        .btn:hover .drop-content{display:block;}
+        .topnav a:hover ,.btn:hover .dropdown{background:red;}
+        .drop-content a:hover{background:#ccc;}
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <a href="#Home">Home</a>
+    <a href="#News">News</a>
+    <div class="btn">
+        <button class="dropdown">Dropdown <i class="fa fa-caret-down"></i> </button>
+        <div class="drop-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <h3>Dropdown Menu inside a Navigation Bar</h3>
+    <p>Hover over the "Dropdown" link to see the dropdown menu</p>
+</div>
+</body>
+</html>

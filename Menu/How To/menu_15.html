@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_15</title>
+    <style type="text/css">
+        .topnav{
+            background:black;
+            width:0;
+            float:left;
+            position:fixed;
+            top:0;
+            left:0;
+            height:100%;
+            z-index:1;
+            overflow-x:hidden;
+        }
+        .topnav .topright {
+            position:absolute;
+            top:0;
+            right:15px;
+        }
+        .topnav a{
+            text-decoration:none;
+            color:#ccc;
+            font-size:26px;
+            padding: 20px;
+            display:block;
+        }
+        .topnav a:hover{
+            color:white;
+        }
+        #main{
+            font-size: 28px;
+            float:left;
+            margin-left: 25%;
+            padding-left:50px;
+        }
+        .icon{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="topnav" id="sidenav">
+    <a href="#" onclick="closeNav();" class="topright">&times</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#clients">Clients</a>
+    <a href="#contact">Contact</a>
+</div>
+<div class="container" id="main">
+    <h2>Animated Sidenav Example</h2>
+    <p>Click on the element below to open the side navigation menu</p>
+    <span class="icon" onclick="openNav()">&#9776; open</span>
+</div>
+<script type="text/javascript">
+    function openNav(){
+       document.getElementById("sidenav").style.width= "20%";
+       document.getElementById("main").style.marginLeft = "25%";
+       document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+    function closeNav(){
+        document.getElementById("sidenav").style.width ='0';
+        document.getElementById("main").style.marginLeft='0';
+        document.body.style.backgroundColor= 'white';
+    }
+</script>
+</body>
+</html>
