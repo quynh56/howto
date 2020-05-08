@@ -1,0 +1,91 @@
+*{box-sizing:border-box}
+.header{
+    padding:50px;
+    background:#f1f1f1;
+    text-align:center;
+}
+.header h1{
+    font-size:60px;
+}
+p{font-size:17px;}
+.navbar{
+    background:black;
+    overflow:hidden;
+    border-radius:4px;
+}
+.navbar a{
+    text-decoration:none;
+    color:#ccc;
+    font-size:17px;
+    padding:10px 16px;
+    float:left;
+    text-align:Center;
+}
+.navbar a:hover{
+    color:white;
+}
+.navbar a.active{color:white;}
+.container{
+    margin:0 auto;
+}
+.row::after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.col-sm-4 ,.col-sm-8{
+    padding:15px;
+}
+.fakeimg{
+    height:200px;
+    background:#bbb;
+}
+.link a{
+    text-decoration:none;
+    color:dodgerblue;
+    padding:10px;
+    margin-bottom:1px;
+    cursor:pointer;
+    border-radius:5px;
+    display:block;
+}
+.link a:hover{
+    background:#ddd;
+}
+.link a.active{
+    color:white;
+    background:dodgerblue;
+}
+.footer{
+    background:#f1f1f1;
+    text-align:Center;
+    padding:60px;
+    border-radius:5px 5px 0 0;
+
+}
+@media screen and (max-width:500px){
+    .navbar{border:none;}
+    .navbar a{
+        float:none;
+        display:block;
+        width:100%;
+        text-align:Center;
+    }
+    .navbar a:hover{
+        background:#ccc;
+        color:black;
+    }
+}
+/*website04*/
+.menu{
+    background:#333;
+    overflow:hidden;
+}
+.menu a{
+    color:#bbb;
+    text-decoration:none;
+    padding:10px 16px;
+    float:left;
+}
+.menu a:hover{color:white;}
+.menu a.active{color:white;}

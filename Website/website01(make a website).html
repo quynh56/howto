@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>website 01</title>
+    <style type="text/css">
+        body{margin:0;}
+        *{box-sizing:border-box}
+        .header{
+            background:#1abc9c;
+            padding:80px;
+            width:100%;
+            text-align:Center;
+            color:white;
+        }
+        .header h1{font-size:40px;}
+        .menu{
+            background:#333;
+            overflow:hidden;
+        }
+        .menu a{
+            text-decoration:none;
+            color:white;
+            padding:14px 20px;
+            display:inline-block;
+        }
+        .right{float:right;}
+        .menu a:hover{
+            background:#ccc;
+            color:black;
+        }
+        .row{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .row::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        .side{
+            flex: 30%;
+            background:#f1f1f1;
+        }
+        .side , .main{
+            float:left;
+            padding:20px;
+        }
+        .main{
+            background:white;
+            flex:70%;
+        }
+        .fakeimg{
+            width:100%;
+            background:#aaa;
+            padding:20px;
+            margin-bottom:15px;
+        }
+        .footer{
+            width:100%;
+            text-align:center;
+            padding: 20px;
+            background:#ddd;
+        }
+        @media screen and (max-width:700px){
+            .row{
+                flex-direction: column;
+            }
+        }
+        @media screen and (max-width:400px){
+            .menu a{
+                text-align:center;
+                width:100%;
+                display:block;
+                float:none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>My Website</h1>
+    <p>A website created by me.</p>
+</div>
+<div class="menu">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#" class="right">Link</a>
+</div>
+<div class="row">
+    <div class="side">
+        <h2>About Me</h2>
+        <h5>Photo of me:</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        <h3>More Text</h3>
+        <p>Lorem ipsum dolor sit ame.</p>
+        <div class="fakeimg" style="height:60px;">Img</div>
+        <div class="fakeimg" style="height:60px;">Img</div>
+        <div class="fakeimg" style="height:60px;">Img</div>
+    </div>
+    <div class="main">
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Sep 2, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+</div>
+<div class="footer">
+    <h2>Footer</h2>
+</div>
+</body>
+</html>

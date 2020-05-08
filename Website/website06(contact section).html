@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>website 06</title>
+    <style type="text/css">
+        *{ box-sizing:border-box;}
+        .container{
+            width:100%;
+            background: #f1f1f1;
+            border-radius:5px;
+            padding:20px;
+            text-align:center;
+        }
+        .row::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        .column{
+            width:50%;
+            float:left;
+            margin-top:6px;
+        }
+        .column img{
+            width:100%;
+            padding:20px 20px 30px;
+        }
+        form{
+            width:100%;
+            padding:20px;
+            text-align:left;
+        }
+        input[type="text"], select, textarea{
+            width:100%;
+            border:1px solid #ccc;
+            padding: 12px 16px;
+            outline:none;
+            margin-bottom:15px;
+            margin-top:5px;
+        }
+        label{font-size:17px;}
+        .btn{
+            background:#4CAF50;
+            color:white;
+            padding:16px 22px;
+            border:none;
+        }
+        .btn:hover{background: #45a049;}
+        @media screen and (max-width:700px){
+            .column,.btn{width:100%;}
+        }
+    </style>
+</head>
+<body>
+<h2>Responsive Contact Section</h2>
+<p>Resize the browser window to see the effect.</p>
+<div class="container">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+    <div class="row">
+         <div class="column">
+             <img src="img/img01.jpg" alt="">
+         </div>
+        <div class="column">
+            <form action="">
+                <label> First Name</label>
+                <input type="text" name="fname" placeholder="Your name..">
+                <label> Last Name</label>
+                <input type="text" name="lname" placeholder="Your last name..">
+                <label>Country</label>
+                <select name="country">
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="US">US</option>
+                </select>
+                <label>Subject</label>
+                <textarea name="message" placeholder="Write something.." cols="30" rows="10"></textarea>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

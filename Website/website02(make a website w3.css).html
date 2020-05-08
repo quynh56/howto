@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>website 02</title>
+    <link rel="stylesheet" href="website02.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+</head>
+<body>
+<nav class="navbar">
+    <a href="#Home" class="bar-item">Home</a>
+    <a href="#Band" class="bar-item">Band</a>
+    <a href="#Tour" class="bar-item">Tour</a>
+    <a href="#Contact" class="bar-item">Contact</a>
+</nav>
+<section>
+    <img src="img/img01.jpg" alt="" class="mySlides">
+    <img src="img/img02.jpg" alt="" class="mySlides">
+    <img src="img/img03.jpg" alt="" class="mySlides">
+</section>
+<section class="content">
+    <h2 class="wide">THE BAND</h2>
+    <p class="text"><i>We love music</i></p>
+    <p class="just">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</section>
+<section class="row">
+    <article class="column">
+        <p>John</p>
+        <img src="img/img04.jpg" alt="">
+        <p>John is the smartest.</p>
+    </article>
+    <article class="column">
+        <p>Paul</p>
+        <img src="img/img05.jpg" alt="">
+        <p>Paul is the prettiest.</p>
+    </article>
+    <article class="column" style="padding-right:10px;">
+        <p>Ringo</p>
+        <img src="img/img06.jpg" alt="">
+        <p>Ringo is the funniest.</p>
+    </article>
+</section>
+<footer>
+    <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    <p>Powered by <a href="/website02.css">website02.css</a></p>
+</footer>
+
+<script>
+    var slideIndex = 0;
+    countSlide();
+    function countSlide(){
+        var slides =document.getElementsByClassName("mySlides");
+        var i;
+        for(i = 0; i < slides.length; i++){
+            slides[i].style.display ="none";
+        }
+        slideIndex++;
+        if(slideIndex >slides.length){slideIndex =1;}
+        slides[slideIndex -1].style.display ="block";
+        setTimeout(countSlide, 3000);
+    }
+</script>
+</body>
+</html>
